@@ -4,25 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>性能优化9条 | Alex&#39;s Blog</title>
+    <title>hexo介绍 | Alex&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liaofeic">
     
-    <meta name="description" content="第一条
-DOM 的多个读操作（或多个写操作），应该放在一起。不要两个读操作之间，加入一个写操作。
-第二条
-如果某个样式是通过重排得到的，那么最好缓存结果。避免下一次用到的时候，浏览器又要重排。
-第三条
-不要一条条地改变样式，而要通过改变class，或者csstext属性，一次性地改变样式。
-第四条
-">
+    <meta name="description" content="hexo介绍hexo是一款基于Node.js的静态博客框架
+特性
+
+风一般的速度Hexo基于Node.js，支持多进程，几百篇文章也可以秒生成。
+
+流畅的撰写支持GitHub Flavored Markdown和所有Octopress的插件。
+
+扩展性Hexo支持EJS、Swig和Stylus。通过">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="alex_lfc6" />
-    <meta name="twitter:title" content="性能优化9条 | Alex&#39;s Blog" />
+    <meta name="twitter:title" content="hexo介绍 | Alex&#39;s Blog" />
       
     
     
@@ -83,15 +83,15 @@ DOM 的多个读操作（或多个写操作），应该放在一起。不要两�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/12/08/My-New-Post/" title="性能优化9条" itemprop="url">性能优化9条</a>
+      <a href="/2016/01/10/hexo1/" title="hexo介绍" itemprop="url">hexo介绍</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-12-07T16:00:00.000Z" itemprop="datePublished">2015-12-08</time>
-    更新日期:<time datetime="2016-01-11T15:09:30.875Z" itemprop="dateModified">2016-01-11</time>
+    <time datetime="2016-01-10T14:53:18.000Z" itemprop="datePublished">2016-01-10</time>
+    更新日期:<time datetime="2016-01-13T15:26:10.240Z" itemprop="dateModified">2016-01-13</time>
     
   </p>
 </header>
@@ -100,47 +100,50 @@ DOM 的多个读操作（或多个写操作），应该放在一起。不要两�
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E00_u6761"><span class="toc-number">1.</span> <span class="toc-text">第一条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E8C_u6761"><span class="toc-number">2.</span> <span class="toc-text">第二条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E09_u6761"><span class="toc-number">3.</span> <span class="toc-text">第三条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u56DB_u6761"><span class="toc-number">4.</span> <span class="toc-text">第四条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E94_u6761"><span class="toc-number">5.</span> <span class="toc-text">第五条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u516D_u6761"><span class="toc-number">6.</span> <span class="toc-text">第六条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E03_u6761"><span class="toc-number">7.</span> <span class="toc-text">第七条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u516B_u6761"><span class="toc-number">8.</span> <span class="toc-text">第八条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E5D_u6761"><span class="toc-number">9.</span> <span class="toc-text">第九条</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo_u4ECB_u7ECD"><span class="toc-number">1.</span> <span class="toc-text">hexo介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7279_u6027"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5FEB_u901F_u5165_u95E8"><span class="toc-number">3.</span> <span class="toc-text">快速入门</span></a></li></ol>
 		</div>
 		
-		<h4 id="u7B2C_u4E00_u6761"><a href="#u7B2C_u4E00_u6761" class="headerlink" title="第一条"></a>第一条</h4><hr>
-<p>DOM 的多个读操作（或多个写操作），应该放在一起。不要两个读操作之间，加入一个写操作。</p>
-<h4 id="u7B2C_u4E8C_u6761"><a href="#u7B2C_u4E8C_u6761" class="headerlink" title="第二条"></a>第二条</h4><hr>
-<p>如果某个样式是通过重排得到的，那么最好缓存结果。避免下一次用到的时候，浏览器又要重排。</p>
-<h4 id="u7B2C_u4E09_u6761"><a href="#u7B2C_u4E09_u6761" class="headerlink" title="第三条"></a>第三条</h4><hr>
-<p>不要一条条地改变样式，而要通过改变class，或者csstext属性，一次性地改变样式。</p>
-<h4 id="u7B2C_u56DB_u6761"><a href="#u7B2C_u56DB_u6761" class="headerlink" title="第四条"></a>第四条</h4><hr>
-<p>尽量使用离线 DOM，而不是真实的页面 DOM，来改变元素样式。<br>比如，操作 Document Fragment 对象，完成后再把这个对象加入 DOM。<br>再比如，使用 cloneNode() 方法，在克隆的节点上进行操作，然后再用克隆的节点替换原始节点。</p>
-<h4 id="u7B2C_u4E94_u6761"><a href="#u7B2C_u4E94_u6761" class="headerlink" title="第五条"></a>第五条</h4><hr>
-<p>先将元素设为 display: none （需要1次重排和重绘），然后对这个节点进行100次操作，<br>最后再恢复显示（需要1次重排和重绘）。这样一来，你就用两次重新渲染，取代了可能高达100次的重新渲染。</p>
-<h4 id="u7B2C_u516D_u6761"><a href="#u7B2C_u516D_u6761" class="headerlink" title="第六条"></a>第六条</h4><hr>
-<p>position属性为absolute或fixed的元素，重排的开销会比较小，因为不用考虑它对其他元素的影响。</p>
-<h4 id="u7B2C_u4E03_u6761"><a href="#u7B2C_u4E03_u6761" class="headerlink" title="第七条"></a>第七条</h4><hr>
-<p>只在必要的时候，才将元素的display属性为可见，因为不可见的元素不影响重排和重绘。另外，visibility : hidden 的元素只对重排有影响，不影响重绘。</p>
-<h4 id="u7B2C_u516B_u6761"><a href="#u7B2C_u516B_u6761" class="headerlink" title="第八条"></a>第八条</h4><hr>
-<p>使用虚拟 DOM 的脚本库，比如 React 等。</p>
-<h4 id="u7B2C_u4E5D_u6761"><a href="#u7B2C_u4E5D_u6761" class="headerlink" title="第九条"></a>第九条</h4><hr>
-<p>使用 window.requestAnimationFrame()、window.requestIdleCallback() 这两个方法调节重新渲染</p>
+		<h4 id="hexo_u4ECB_u7ECD"><a href="#hexo_u4ECB_u7ECD" class="headerlink" title="hexo介绍"></a>hexo介绍</h4><p>hexo是一款基于Node.js的静态博客框架</p>
+<h4 id="u7279_u6027"><a href="#u7279_u6027" class="headerlink" title="特性"></a>特性</h4><blockquote>
+<ul>
+<li><p>风一般的速度<br>Hexo基于Node.js，支持多进程，几百篇文章也可以秒生成。</p>
+</li>
+<li><p>流畅的撰写<br>支持GitHub Flavored Markdown和所有Octopress的插件。</p>
+</li>
+<li><p>扩展性<br>Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="u5FEB_u901F_u5165_u95E8"><a href="#u5FEB_u901F_u5165_u95E8" class="headerlink" title="快速入门"></a>快速入门</h4><p>使用</p>
+<p>首先在使用之前我们需要一点node.js和git基础。<br>这两个的安装其实是非常简单，无脑下一步，大家搜索一下很容易就能上手的，<br>对于广大的技术宅都是小菜一碟了。</p>
+<p>安装</p>
+<p>前提是必须先安装 Node.js，以下命令可以在CMD工具中打开，但是我建议大家还是用git bash。<br><code>npm install hexo -g</code><br>npm是node的包管理工具，仅需一步就把 Hexo 安装好</p>
+<p>升级</p>
+<p>更新hexo到最新版<br><code>npm update hexo -g</code><br>初始化</p>
+<p><code>hexo init &lt;folder&gt;</code><br>folder便是文件夹名了<br>如果指定 <folder>，便会在目前的资料夹建立一个名为 <folder> 的新资料夹；否则会在目前资料夹初始化。</folder></folder></p>
+<p>之后需要安装一些node需要用的模块 命令如下<br><code>npm install</code></p>
+<p>创建新博客</p>
+<p><code>hexo new &quot;Hello World&quot;</code><br>生成网站<br><code>hexo generate</code><br>服务器<br><code>hexo server</code><br>服务器会跑在 <a href="http://localhost:port" target="_blank" rel="external">http://localhost:port</a> （port 预设为 4000，可在 _config.yml 设定）</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/HTML/">HTML</a><a href="/tags/JavaScript/">JavaScript</a><a href="/tags/性能优化/">性能优化</a>
+  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/博客/">博客</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+  <a class="article-category-link" href="/categories/hexo/">hexo</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/12/08/My-New-Post/" data-title="性能优化9条 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/01/10/hexo1/" data-title="hexo介绍 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -150,18 +153,18 @@ DOM 的多个读操作（或多个写操作），应该放在一起。不要两�
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/01/04/hello-world/" title="Hello World">
+ <a href="/2016/01/10/hexo2/" title="hexo搭建">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  Hello World</span>
+  hexo搭建</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/03/sublime快捷键/"  title="sublime常用快捷键总结">
+<a href="/2016/01/04/hello-world/"  title="Hello World">
  <strong>NEXT:</strong><br/> 
- <span>sublime常用快捷键总结
+ <span>Hello World
 </span>
 </a>
 </div>
@@ -171,7 +174,7 @@ DOM 的多个读操作（或多个写操作），应该放在一起。不要两�
 	
 <section class="comment">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/12/08/My-New-Post/" data-title="性能优化9条" data-url="http://yoursite.com/2015/12/08/My-New-Post/"></div>
+	<div class="ds-thread" data-thread-key="2016/01/10/hexo1/" data-title="hexo介绍" data-url="http://yoursite.com/2016/01/10/hexo1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -193,7 +196,7 @@ DOM 的多个读操作（或多个写操作），应该放在一起。不要两�
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E00_u6761"><span class="toc-number">1.</span> <span class="toc-text">第一条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E8C_u6761"><span class="toc-number">2.</span> <span class="toc-text">第二条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E09_u6761"><span class="toc-number">3.</span> <span class="toc-text">第三条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u56DB_u6761"><span class="toc-number">4.</span> <span class="toc-text">第四条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E94_u6761"><span class="toc-number">5.</span> <span class="toc-text">第五条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u516D_u6761"><span class="toc-number">6.</span> <span class="toc-text">第六条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E03_u6761"><span class="toc-number">7.</span> <span class="toc-text">第七条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u516B_u6761"><span class="toc-number">8.</span> <span class="toc-text">第八条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7B2C_u4E5D_u6761"><span class="toc-number">9.</span> <span class="toc-text">第九条</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo_u4ECB_u7ECD"><span class="toc-number">1.</span> <span class="toc-text">hexo介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7279_u6027"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5FEB_u901F_u5165_u95E8"><span class="toc-number">3.</span> <span class="toc-text">快速入门</span></a></li></ol>
   </div>
 
 <div id="asidepart">
