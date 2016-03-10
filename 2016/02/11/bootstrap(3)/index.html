@@ -1,0 +1,432 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>bootstrap常用再总结 | Alex&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="liaofeic">
+    
+    <meta name="description" content="下拉菜单123456&amp;lt;div class=&quot;dropdown&quot;&amp;gt;	&amp;lt;a data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&amp;gt;Dropdown trigger&amp;lt;/a&amp;gt;	&amp;lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; ar">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="alex_lfc6" />
+    <meta name="twitter:title" content="bootstrap常用再总结 | Alex&#39;s Blog" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/cat.png" alt="Alex&#39;s Blog" title="Alex&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Alex&#39;s Blog">Alex&#39;s Blog</a></h1>
+				<h2 class="blog-motto">不要让他人的观点掩盖你内心的声音。最重要的是，要有勇气追随自己的内心和直觉!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">时光机</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tool">工具</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/02/11/bootstrap(3)/" title="bootstrap常用再总结" itemprop="url">bootstrap常用再总结</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-02-11T14:53:18.000Z" itemprop="datePublished">2016-02-11</time>
+    更新日期:<time datetime="2016-03-10T17:24:31.410Z" itemprop="dateModified">2016-03-11</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p>下拉菜单<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dropdown"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">data-toggle</span>=<span class="value">"dropdown"</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Dropdown trigger<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"dropdown-menu"</span> <span class="attribute">role</span>=<span class="value">"menu"</span> <span class="attribute">aria-labelledby</span>=<span class="value">"dLabel"</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">	<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>标签页:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav nav-tabs"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#home"</span> <span class="attribute">data-toggle</span>=<span class="value">"tab"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#profile"</span> <span class="attribute">data-toggle</span>=<span class="value">"tab"</span>&gt;</span>Profile<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#messages"</span> <span class="attribute">data-toggle</span>=<span class="value">"tab"</span>&gt;</span>Messages<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#settings"</span> <span class="attribute">data-toggle</span>=<span class="value">"tab"</span>&gt;</span>Settings<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-content"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-pane active"</span> <span class="attribute">id</span>=<span class="value">"home"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-pane"</span> <span class="attribute">id</span>=<span class="value">"profile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-pane"</span> <span class="attribute">id</span>=<span class="value">"messages"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-pane"</span> <span class="attribute">id</span>=<span class="value">"settings"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>工具提示:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=”tooltip-demo”&gt;</span><br><span class="line">	&lt;a href=<span class="string">"#"</span> data-toggle=<span class="string">"tooltip"</span> title=<span class="string">"first tooltip"</span>&gt;Hover <span class="keyword">over</span> <span class="keyword">me</span>&lt;/a&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>弹出框:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a <span class="built_in">data</span><span class="attribute">-content</span>=<span class="string">"And here's some amazing content. It's very engaging.</span><br><span class="line">right?"</span>  title=<span class="string">"A  Title"</span>  <span class="built_in">data</span><span class="attribute">-toggle</span>=<span class="string">"popover"</span>  class=<span class="string">"btn  btn-lg</span><br><span class="line">btn-danger"</span> href=<span class="string">"#"</span>&gt;Click <span class="keyword">to</span> toggle popover&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>警告框:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"alert alert-warning fade in"</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">button </span>aria-hidden=<span class="string">"true"</span> <span class="preprocessor">data</span>-dismiss=<span class="string">"alert"</span> class=<span class="string">"close"</span></span><br><span class="line">		type=<span class="string">"button"</span>&gt;×&lt;/<span class="keyword">button&gt;</span><br><span class="line"></span>	&lt;<span class="keyword">strong&gt;Holy </span>guacamole!&lt;/<span class="keyword">strong&gt; </span><span class="keyword">Best </span>check yo <span class="keyword">self, </span>you<span class="string">'re</span><br><span class="line">		not looking too good.</span><br><span class="line">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>按钮:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">"btn-group"</span> data-toggle=<span class="string">"buttons"</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">label</span> <span class="keyword">class</span>=<span class="string">"btn btn-primary"</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span>&gt; Option 1</span><br><span class="line">	&lt;/<span class="keyword">label</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">label</span> <span class="keyword">class</span>=<span class="string">"btn btn-primary"</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span>&gt; Option 2</span><br><span class="line">	&lt;/<span class="keyword">label</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">label</span> <span class="keyword">class</span>=<span class="string">"btn btn-primary"</span>&gt;</span><br><span class="line">	&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span>&gt; Option 3</span><br><span class="line">	&lt;/<span class="keyword">label</span>&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>折叠:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"panel-group"</span> <span class="property">id</span>=<span class="string">"accordion"</span>&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"panel panel-default"</span>&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"panel-heading"</span>&gt;</span><br><span class="line">&lt;h4 <span class="type">class</span>=<span class="string">"panel-title"</span>&gt;</span><br><span class="line">&lt;a data-toggle=<span class="string">"collapse"</span>  data-toggle=<span class="string">"collapse"</span></span><br><span class="line">data-parent=<span class="string">"#accordion"</span> href=<span class="string">"#collapseOne"</span>&gt;</span><br><span class="line">Collapsible Group Item <span class="comment">#1</span></span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;/h4&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=<span class="string">"collapseOne"</span> <span class="type">class</span>=<span class="string">"panel-collapse collapse in"</span>&gt;</span><br><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"panel-body"</span>&gt;</span><br><span class="line">Anim pariatur cliche reprehenderit</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>轮播:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="tag">div</span>  id=<span class="string">"carousel-example-generic"</span> class=<span class="string">"carousel  slide"</span></span><br><span class="line">data-ride=<span class="string">"carousel"</span>&gt;</span><br><span class="line">&lt;<span class="tag">ol</span> class=<span class="string">"carousel-indicators"</span>&gt;</span><br><span class="line">&lt;<span class="tag">li</span>  data-target=<span class="string">"#carousel-example-generic"</span> data-slide-to=<span class="string">"0"</span></span><br><span class="line">class=<span class="string">"active"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="tag">li</span> data-target=<span class="string">"#carousel-example-generic"</span> data-slide-to=<span class="string">"1"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="tag">li</span> data-target=<span class="string">"#carousel-example-generic"</span> data-slide-to=<span class="string">"2"</span>&gt;&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;<span class="tag">div</span> class=<span class="string">"carousel-inner"</span>&gt;</span><br><span class="line">&lt;<span class="tag">div</span> class=<span class="string">"item active"</span>&gt;</span><br><span class="line">	&lt;<span class="tag">img</span> src=<span class="string">"..."</span> alt=<span class="string">"..."</span>&gt;</span><br><span class="line">	&lt;<span class="tag">div</span> class=<span class="string">"carousel-caption"</span>&gt;</span><br><span class="line">	...</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">...</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">	&lt;<span class="tag">a</span>  class=<span class="string">"left  carousel-control"</span>  href=<span class="string">"#carousel-example-generic"</span></span><br><span class="line">	data-slide=<span class="string">"prev"</span>&gt;</span><br><span class="line">	&lt;<span class="tag">span</span> class=<span class="string">"glyphicon glyphicon-chevron-left"</span>&gt;&lt;/span&gt;</span><br><span class="line">	&lt;/a&gt;</span><br><span class="line">	&lt;<span class="tag">a</span> class=<span class="string">"right carousel-control"</span> href=<span class="string">"#carousel-example-generic"</span></span><br><span class="line">	data-slide=<span class="string">"next"</span>&gt;</span><br><span class="line">	&lt;<span class="tag">span</span> class=<span class="string">"glyphicon glyphicon-chevron-right"</span>&gt;&lt;/span&gt;</span><br><span class="line">	&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/bootstrap/">bootstrap</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/bootstrap/">bootstrap</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2016/02/11/bootstrap(3)/" data-title="bootstrap常用再总结 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/02/11/bootstrap(2)/" title="bootstrap常用续">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  bootstrap常用续</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/02/11/ajax/"  title="AJAX详解">
+ <strong>NEXT:</strong><br/> 
+ <span>AJAX详解
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/02/11/bootstrap(3)/" data-title="bootstrap常用再总结" data-url="http://yoursite.com/2016/02/11/bootstrap(3)/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lfc625"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/categories/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/categories/bootstrap/" title="bootstrap">bootstrap<sup>3</sup></a></li>
+		
+			<li><a href="/categories/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>1</sup></a></li>
+		
+			<li><a href="/categories/开发工具/" title="开发工具">开发工具<sup>1</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/HTML/" title="HTML">HTML<sup>1</sup></a></li>
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/tags/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>4</sup></a></li>
+		
+			<li><a href="/tags/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+		
+			<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
+		
+			<li><a href="/tags/博客/" title="博客">博客<sup>6</sup></a></li>
+		
+			<li><a href="/tags/性能优化/" title="性能优化">性能优化<sup>1</sup></a></li>
+		
+			<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/tags/浏览器兼容性/" title="浏览器兼容性">浏览器兼容性<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Alex in China <br/>
+			欢迎来到我的个人博客瞅一瞅</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/3375916192" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/alex_lfc6" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/lfc625" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="liaofeic">liaofeic</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"lfc625"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>

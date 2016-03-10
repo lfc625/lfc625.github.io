@@ -1,0 +1,700 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>css3学习笔记 | Alex&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="liaofeic">
+    
+    <meta name="description" content="向前兼容的前缀-webkit chrome和safari
+-moz firefox
+-ms IE
+-O opera
+CSS3有哪些优势1.选择器
+2.圆角效果
+3.块阴影与文字阴影
+4.色彩
+5.渐变效果
+6.个性化字体
+7.多背景图
+8.边框背景图
+9.变形处理
+10.多栏布局
+11.媒体查询
+C">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="alex_lfc6" />
+    <meta name="twitter:title" content="css3学习笔记 | Alex&#39;s Blog" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/cat.png" alt="Alex&#39;s Blog" title="Alex&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Alex&#39;s Blog">Alex&#39;s Blog</a></h1>
+				<h2 class="blog-motto">不要让他人的观点掩盖你内心的声音。最重要的是，要有勇气追随自己的内心和直觉!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">时光机</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tool">工具</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/02/11/css3/" title="css3学习笔记" itemprop="url">css3学习笔记</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-02-11T03:53:18.000Z" itemprop="datePublished">2016-02-11</time>
+    更新日期:<time datetime="2016-03-10T16:34:53.675Z" itemprop="dateModified">2016-03-11</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5411_u524D_u517C_u5BB9_u7684_u524D_u7F00"><span class="toc-number">1.</span> <span class="toc-text">向前兼容的前缀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u6709_u54EA_u4E9B_u4F18_u52BF"><span class="toc-number">2.</span> <span class="toc-text">CSS3有哪些优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u8FB9_u6846"><span class="toc-number">3.</span> <span class="toc-text">CSS3边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u989C_u8272_u6709_u5173"><span class="toc-number">4.</span> <span class="toc-text">CSS3颜色有关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u6587_u5B57_u4E0E_u5B57_u4F53"><span class="toc-number">5.</span> <span class="toc-text">CSS3文字与字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u80CC_u666F_u76F8_u5173"><span class="toc-number">6.</span> <span class="toc-text">CSS3背景相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u5C5E_u6027_u9009_u62E9_u5668"><span class="toc-number">7.</span> <span class="toc-text">CSS3属性选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u7684_u53D8_u5F62_u4E0E_u52A8_u753B"><span class="toc-number">8.</span> <span class="toc-text">CSS3的变形与动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u5E03_u5C40_u6837_u5F0F_u76F8_u5173"><span class="toc-number">9.</span> <span class="toc-text">CSS3布局样式相关</span></a></li></ol>
+		</div>
+		
+		<h2 id="u5411_u524D_u517C_u5BB9_u7684_u524D_u7F00"><a href="#u5411_u524D_u517C_u5BB9_u7684_u524D_u7F00" class="headerlink" title="向前兼容的前缀"></a>向前兼容的前缀</h2><pre><code>-webkit chrome和safari
+-moz firefox
+-ms IE
+-O opera
+</code></pre><h2 id="CSS3_u6709_u54EA_u4E9B_u4F18_u52BF"><a href="#CSS3_u6709_u54EA_u4E9B_u4F18_u52BF" class="headerlink" title="CSS3有哪些优势"></a>CSS3有哪些优势</h2><pre><code>1.选择器
+2.圆角效果
+3.块阴影与文字阴影
+4.色彩
+5.渐变效果
+6.个性化字体
+7.多背景图
+8.边框背景图
+9.变形处理
+10.多栏布局
+11.媒体查询
+</code></pre><h2 id="CSS3_u8FB9_u6846"><a href="#CSS3_u8FB9_u6846" class="headerlink" title="CSS3边框"></a>CSS3边框</h2><pre><code>1.圆角效果
+        border-radius(1或4个参数) 一般用PX做单位 其他兼容性目前不好
+        实心圆
+        正方 半径给一半
+        和实心半圆 高度是宽度一半
+2.阴影
+        box-shadow
+        X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式];
+
+        阴影模糊半径：此参数可选，只能为正，为0时，表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊；
+
+        阴影扩展半径：此参数可选，可以是正负，值为正，阴影都延展扩大，值为负值时，则缩小；
+
+        X轴偏移量和Y轴偏移量值可以设置为负数
+        可以转换阴影的方向
+3.为边框应用图片
+        border-image
+        border-image:url(地址) 70 repeat
+
+        round参数 圆满的铺满
+        stretch 中间拉长
+</code></pre><h2 id="CSS3_u989C_u8272_u6709_u5173"><a href="#CSS3_u989C_u8272_u6709_u5173" class="headerlink" title="CSS3颜色有关"></a>CSS3颜色有关</h2><pre><code>1.color：rgba(R,G,B,A)
+2.渐变颜色
+    linear-gradient()
+    radial-gradient()
+    3个参数,第一个渐变方向,第二个起始颜色,第三个中止颜色
+    角度    英文              作用
+    0deg    to top           从下到上
+    90deg   to right          从左到右
+    180deg   to bottom      从下到上
+    270deg   to left           从右到左
+            to top left     右下角到左上角
+            to top right     左下角到右上角
+</code></pre><h2 id="CSS3_u6587_u5B57_u4E0E_u5B57_u4F53"><a href="#CSS3_u6587_u5B57_u4E0E_u5B57_u4F53" class="headerlink" title="CSS3文字与字体"></a>CSS3文字与字体</h2><pre><code>1.text-overflow:clip|ellipsis
+    文字溢出的时候如何显示，
+    clip直接裁剪；
+    ellipsis表示省略号；    
+2.word-wrap normal|break-word
+    normal  表示控制连续文本换行
+    break-word  表示内容在边界内换行
+
+    text-overflow:ellipsis; 
+    overflow:hidden; 
+    white-space:nowrap; 强制一行内显示
+
+3.嵌入字体
+    @font-face {
+                    font-family : 字体名称;
+                    src : 字体文件在服务器上的相对或绝对路径;
+                }
+    能够加载服务器端的字体文件
+
+4.文本阴影
+    text-shadow: X-Offset Y-Offset blur color;
+    X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      
+
+    Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；
+
+    Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；
+
+    Color：是指阴影的颜色，其可以使用rgba色
+</code></pre><h2 id="CSS3_u80CC_u666F_u76F8_u5173"><a href="#CSS3_u80CC_u666F_u76F8_u5173" class="headerlink" title="CSS3背景相关"></a>CSS3背景相关</h2><pre><code>1.background-origin:border-box | padding-box | content-box;
+  背景图片是从边框，还是内边距（默认值），或者内容区域开始显示。背景必须no-repeat
+2.background-clip ： border-box | padding-box | content-box | no-clip
+  从边框、或内填充，或者内容区域向外裁剪背景。no-clip表示不裁切，
+  和参数border-box显示同样的效果。backgroud-clip默认值为border-box
+3.background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain
+  auto：默认值，不改变背景图片的原始高度和宽度；
+  &lt;长度值&gt;：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；
+  &lt;百分比&gt;：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上；
+  cover：顾名思义为覆盖，即将背景图片等比缩放以填满整个容器；
+  contain：容纳，即将背景图片等比缩放至某一边紧贴容器边缘为止。
+4.multiple backgrounds
+    background-image:url1,url2,...,urlN;
+    //多背景写法
+    background-image: 
+          url(http://img.mukewang.com/54cf2365000140e600740095.jpg),
+          url(http://img.mukewang.com/54cf238a0001728d00740095.jpg),
+          url(http://img.mukewang.com/54cf23b60001fd9700740096.jpg);
+    background-position: left top, 50px 0, 100px 0;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+</code></pre><h2 id="CSS3_u5C5E_u6027_u9009_u62E9_u5668"><a href="#CSS3_u5C5E_u6027_u9009_u62E9_u5668" class="headerlink" title="CSS3属性选择器"></a>CSS3属性选择器</h2><pre><code>1.通配
+    a[class^=column]{
+        background:red;
+    }//开头
+    a[href$=doc]{
+        background:green;
+    }//结尾
+    a[title*=box]{
+        background:blue;
+    }//包含
+2.结构性伪类选择器—root
+    :root选择器，根选择器，匹配元素E所在文档的根元素。
+    在HTML文档中，根元素始终是&lt;html&gt;
+3.结构性伪类选择器-not
+    :not可以选择除某个元素之外的所有元素
+4.结构性伪类选择器—empty
+    选择没有任何内容的元素
+5.结构性伪类选择器—target
+    选择器称为目标选择器，用来匹配文档(页面)的url的某个标志符的目标元素
+6.结构性伪类选择器—first-child
+    “:first-child”选择器表示的是选择父元素的第一个(子)元素的元素E
+7.结构性伪类选择器—last-child
+8.结构性伪类选择器—nth-child
+9.结构性伪类选择器—nth-child(n)
+    定位父元素的一个或多个特定的子元素。
+    n  整数值(1,2,3,4)表达式(2n+1、-n+5)(odd、even)，
+    但参数n的起始值始终是1，而不是0，参数n的值为0时，选择器将选择不到任何匹配的元素。
+10.first-of-type选择器
+    用来定位一个父元素下的某个类型的第一个子元素
+    选择的是类型
+11.nth-of-type(n)选择器
+    父元素制定某种类型的子元素
+12.last-of-type
+    最后类型的子元素
+13.nth-last-of-type
+    倒数开始选择类似于nth-of-type
+14.only-child
+    匹配的元素的父元素中仅有一个子元素，而且是一个唯一的子元素
+15.only-of-type
+    一个元素他有很多个子元素，而其中只有一种类型的子元素是唯一的
+16. :enabled
+    可用的表单
+17. :disabled
+    不可用的表单
+18. :checked
+    选中的
+19. ::selection
+    伪元素是用来匹配突出显示的文本，选中文本的时候颜色显示
+20. :read-only
+    伪类选择器用来指定处于只读状态元素的样式
+21.    :read-write
+    指定当元素处于非只读状态时的样式
+22.    ::before和::after
+
+    ::before和::after这两个主要用来给元素的前面或后面插入内容，这两个常和&quot;content&quot;配合使用，使用的场景最多的就是清除浮动
+
+   清除浮动
+    .clearfix::before,
+    .clearfix::after {
+        content: &quot;.&quot;;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+    .clearfix:after {clear: both;}
+    .clearfix {zoom: 1;}
+</code></pre><h2 id="CSS3_u7684_u53D8_u5F62_u4E0E_u52A8_u753B"><a href="#CSS3_u7684_u53D8_u5F62_u4E0E_u52A8_u753B" class="headerlink" title="CSS3的变形与动画"></a>CSS3的变形与动画</h2><pre><code>    -webkit-transform:
+1.变形--旋转 rotate()
+    正值 顺时针  负值 逆时针
+2.变形--扭曲 skew()
+    让元素倾斜显示 拉伸效果
+
+3.变形--缩放 scale()
+     scale(X,Y)使元素水平方向和垂直方向同时缩放
+     scaleX(x)元素仅水平方向缩放
+     scaleY(y)元素仅垂直方向缩放
+
+4.变形--位移 translate()
+     translate(x,y)水平方向和垂直方向同时移动
+     translateX(x)仅水平方向移动
+     translateY(Y)仅垂直方向移动
+
+5.变形--矩阵 matrix()
+      matrix() 是一个含六个值的(a,b,c,d,e,f)变换矩阵
+
+6.变形--原点 transform-origin
+      任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处
+      通过transform-origin来对元素进行原点位置改变，使元素原点不在元素的中心位置，以达到需要的原点位置。
+7.动画--过渡属性 transition-property
+
+8.动画--过渡所需时间 transition-duration
+
+      属性主要用来设置一个属性过渡到另一个属性所需的时间
+
+9.动画--过渡函数 transition-timing-function
+
+      指定浏览器的过渡速度
+
+10.动画--过渡延迟时间 transition-delay
+
+        a{ transition: background 0.8s ease-in 0.3,color 0.6s ease-out 0.3;}
+
+11.Keyframes介绍
+   关键帧
+   @keyframes开头，后面紧跟着动画名称加{}
+   0%到100%之间创建多个百分比，分别给每个百分比中给需要有动画效果的元素加上不同的样式，从而达到一种在不断变化的效果
+   webkit moz需要加上前缀
+12.调用动画
+   animation-name 来调用@keyframes定义的动画
+   animation-name: none | IDENT[,none|DENT]*;
+13.设置动画播放时间
+   animation-duration
+   animation-duration: &lt;time&gt;[,&lt;time&gt;]*
+   一般设置秒
+14.设置动画开始播放的时间
+
+    animation-delay:&lt;time&gt;[,&lt;time&gt;]*
+
+15.设置动画播放方式
+    animation-timing-function:
+    ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) [, ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)]*
+
+    ease,ease-in,ease-in-out,ease-out,linear和cubic-bezier
+    ease:从初始状态过渡到终止状态的速度由慢到快，逐渐变慢
+    linear:速度恒定
+    ease-in:速度越来越快，渐显效果
+    ease-out:速度越来越慢，渐隐效果
+    ease-in-out:先加速再减速，渐显渐隐效果
+16.设置动画播放次数
+    animation-iteration-count属性主要用来定义动画的播放次数
+17.设置动画播放方向
+    animation-direction属性主要用来设置动画播放方向
+18.设置动画播放状态
+    animation-play-state属性主要用来控制元素动画的播放状态
+
+    有running 和 paused两个参数
+19.设置动画时间外属性
+    animation-fill-mode
+    none 默认 完成动画后会转到初始帧
+    forwards 完成后在最后帧的位置
+    backwards 会在向元素应用动画样式时迅速应用动画的初始帧
+    both 具有forwards和backwards两种效果
+</code></pre><h2 id="CSS3_u5E03_u5C40_u6837_u5F0F_u76F8_u5173"><a href="#CSS3_u5E03_u5C40_u6837_u5F0F_u76F8_u5173" class="headerlink" title="CSS3布局样式相关"></a>CSS3布局样式相关</h2><pre><code>1.多列布局 columns
+        columns：&lt;column-width&gt; || &lt;column-count&gt;
+        两个参数 列宽，列数
+2.多列布局 column-width
+        column-width: auto | &lt;length&gt;
+        auto自适应，length 自己设置长度
+3.多列布局 column-count
+        column-count：auto | &lt;integer&gt;
+        auto浏览器自己计算，自己设置
+4.列间距 column-gap
+        column-gap: normal || &lt;length&gt;
+        列和列的间距 normal为1px
+5.列表边框 column-rule
+        column-rule,边框宽度，边框样式，边框颜色
+        类似border但是不占用空间位置
+        column-rule:&lt;column-rule-width&gt;|&lt;column-rule-style&gt;|&lt;column-rule-color&gt;
+6.跨列设置 colum-span
+        column-span: none | all
+        none不跨越任何列
+        all跨越所有列
+7.盒子模型
+
+8.伸缩布局
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/css/">css</a><a href="/tags/css3/">css3</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/css/">css</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2016/02/11/css3/" data-title="css3学习笔记 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/02/11/ajax/" title="AJAX详解">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  AJAX详解</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/01/14/angular购物车/"  title="angular购物车">
+ <strong>NEXT:</strong><br/> 
+ <span>angular购物车
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/02/11/css3/" data-title="css3学习笔记" data-url="http://yoursite.com/2016/02/11/css3/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lfc625"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5411_u524D_u517C_u5BB9_u7684_u524D_u7F00"><span class="toc-number">1.</span> <span class="toc-text">向前兼容的前缀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u6709_u54EA_u4E9B_u4F18_u52BF"><span class="toc-number">2.</span> <span class="toc-text">CSS3有哪些优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u8FB9_u6846"><span class="toc-number">3.</span> <span class="toc-text">CSS3边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u989C_u8272_u6709_u5173"><span class="toc-number">4.</span> <span class="toc-text">CSS3颜色有关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u6587_u5B57_u4E0E_u5B57_u4F53"><span class="toc-number">5.</span> <span class="toc-text">CSS3文字与字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u80CC_u666F_u76F8_u5173"><span class="toc-number">6.</span> <span class="toc-text">CSS3背景相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u5C5E_u6027_u9009_u62E9_u5668"><span class="toc-number">7.</span> <span class="toc-text">CSS3属性选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u7684_u53D8_u5F62_u4E0E_u52A8_u753B"><span class="toc-number">8.</span> <span class="toc-text">CSS3的变形与动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3_u5E03_u5C40_u6837_u5F0F_u76F8_u5173"><span class="toc-number">9.</span> <span class="toc-text">CSS3布局样式相关</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/categories/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/categories/bootstrap/" title="bootstrap">bootstrap<sup>3</sup></a></li>
+		
+			<li><a href="/categories/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>1</sup></a></li>
+		
+			<li><a href="/categories/开发工具/" title="开发工具">开发工具<sup>1</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/HTML/" title="HTML">HTML<sup>1</sup></a></li>
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/tags/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>4</sup></a></li>
+		
+			<li><a href="/tags/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+		
+			<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
+		
+			<li><a href="/tags/博客/" title="博客">博客<sup>6</sup></a></li>
+		
+			<li><a href="/tags/性能优化/" title="性能优化">性能优化<sup>1</sup></a></li>
+		
+			<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/tags/浏览器兼容性/" title="浏览器兼容性">浏览器兼容性<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Alex in China <br/>
+			欢迎来到我的个人博客瞅一瞅</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/3375916192" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/alex_lfc6" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/lfc625" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="liaofeic">liaofeic</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"lfc625"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,507 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>css重置样式 | Alex&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="liaofeic">
+    
+    <meta name="description" content="一.最简化的CSS Reset(重设) :
+
+{padding: 0;
+margin: 0;
+}
+
+　　这是最普遍最简单的CSS重设，将所有元素的padding和margin值都设为0，可以避免一些浏览器在理解这两个属性默认值上的”分歧”。
+
+{padding: 0;
+margin: 0;
+bord">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="alex_lfc6" />
+    <meta name="twitter:title" content="css重置样式 | Alex&#39;s Blog" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/cat.png" alt="Alex&#39;s Blog" title="Alex&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Alex&#39;s Blog">Alex&#39;s Blog</a></h1>
+				<h2 class="blog-motto">不要让他人的观点掩盖你内心的声音。最重要的是，要有勇气追随自己的内心和直觉!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">时光机</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tool">工具</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/14/css重置/" title="css重置样式" itemprop="url">css重置样式</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-01-14T14:26:24.000Z" itemprop="datePublished">2016-01-14</time>
+    更新日期:<time datetime="2016-03-10T17:39:30.940Z" itemprop="dateModified">2016-03-11</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p>一.最简化的CSS Reset(重设) :</p>
+<ul>
+<li>{<pre><code>padding: 0;
+margin: 0;
+</code></pre>}</li>
+</ul>
+<p>　　这是最普遍最简单的CSS重设，将所有元素的padding和margin值都设为0，可以避免一些浏览器在理解这两个属性默认值上的”分歧”。</p>
+<ul>
+<li>{<pre><code>padding: 0;
+margin: 0;
+border: 0;
+</code></pre>}</li>
+</ul>
+<p>　　这是在上一个重设的基础上添加了对border属性的重设，初始值为0的确能避免一些问题。</p>
+<ul>
+<li>{<pre><code>outline: 0;
+padding: 0;
+margin: 0;
+border: 0;
+</code></pre>}</li>
+</ul>
+<p>　　在前两个的基础上添加了outline属性的重设，防止一些冲突。</p>
+<p>二.浓缩实用型CSS Reset(重设):</p>
+<ul>
+<li>{<pre><code>vertical-align: baseline;
+font-weight: inherit; 
+font-family: inherit; 
+font-style: inherit;
+font-size: 100%;
+outline: 0;
+padding: 0;
+margin: 0;
+border: 0;
+</code></pre>}</li>
+</ul>
+<p>　　该CSS重设方法出自Perishable Press，这是他常用的方法。</p>
+<p>三.Poor Man 的CSS Reset:</p>
+<p>html, body {<br>       padding: 0;<br>       margin: 0;<br>}<br>html {<br>       font-size:1em;<br>}<br>body {<br>       font-size:100%;<br>}<br>a img, :link img, :visited img {<br>       border:0px;<br>} </p>
+<p>　　这个重设方法将html和body下元素的padding和margin都设为0，并分别为html标签和body标签下的所有元素设置了初始的字体大小，最重要的是把有链接的图片的默认边框去掉了。</p>
+<p>四.Siolon’s Global Reset</p>
+<ul>
+<li>{<br>  vertical-align: baseline;<br>  font-family: inherit;<br>  fo</li>
+</ul>
+<p>nt-style: inherit;<br>    font-size: 100%;<br>    border: none;<br>    padding: 0;<br>    margin: 0;<br>}<br>body {<br>    padding: 5px;<br>}<br>h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {<br>    margin: 20px 0;<br>}<br>li, dd, blockquote {<br>    margin-left: 40px;<br>}<br>table {<br>    border-collapse: collapse;<br>    border-spacing: 0;<br>}</p>
+<p>五.Shaun Inman’s Global Reset</p>
+<p>body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {<br>    padding: 0;<br>    margin: 0;<br>}<br>table {<br>    border-collapse: collapse;<br>    border-spacing: 0;<br>}<br>    fieldset, img, abbr {<br>    border: 0;<br>}<br>address, caption, cite, code, dfn, em,<br>h1, h2, h3, h4, h5, h6, strong, th, var {<br>    font-weight: normal;<br>    font-style: normal;<br>}<br>ul {<br>    list-style: none;<br>}<br>caption, th {<br>    text-align: left;<br>}<br>h1, h2, h3, h4, h5, h6 {<br>    font-size: 1.0em;<br>}<br>q:before, q:after {<br>    content: ”;<br>}<br>a, ins {<br>    text-decoration: none;<br>}</p>
+<p>六.Yahoo(YUI) CSS Reset:</p>
+<p>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,<br>form,fieldset,input,textarea,p,blockquote,th,td {<br>    padding: 0;<br>    margin: 0;<br>}<br>table {<br>    border-collapse: collapse;<br>    border-spacing: 0;<br>}<br>fieldset,img {<br>    border: 0;<br>}<br>address,caption,cite,code,dfn,em,strong,th,var {<br>    font-weight: normal;<br>    font-style: normal;<br>}<br>ol,ul {<br>    list-style: none;<br>}<br>caption,th {<br>    text-align: left;<br>}<br>h1,h2,h3,h4,h5,h6 {<br>    font-weight: normal;<br>    font-size: 100%;<br>}<br>q:before,q:after {<br>    content:”;<br>}<br>abbr,acronym {<br>    border: 0;<br>}</p>
+<p>七.Eric Meyer’s CSS Reset</p>
+<p>html, body, div, span, applet, object, iframe, table, caption,<br>tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,<br>kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,<br>h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,<br>acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,<br>fieldset, form, label, legend {<br>    vertical-align: baseline;<br>    font-family: inherit;<br>    font-weight: inherit;<br>    font-style: inherit;<br>    font-size: 100%;<br>    outline: 0;<br>    padding: 0;<br>    margin: 0;<br>    border: 0;<br>}<br>:focus {<br>    outline: 0;<br>}<br>body {<br>    background: white;<br>    line-height: 1;<br>    color: black;<br>}<br>ol, ul {<br>    list-style: none;<br>}<br>table {<br>    border-collapse: separate;<br>    border-spacing: 0;<br>}<br>caption, th, td {<br>    font-weight: normal;<br>    text-align: left;<br>}<br>blockquote:before, blockquote:after, q:before, q:after {<br>    content: “”;<br>}<br>blockquote, q {<br>    quotes: “” “”;<br>}</p>
+<p>八.Condensed Meyer Reset:</p>
+<p>body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,<br>pre, form, fieldset, input, textarea, p, blockquote, th, td {<br>    padding: 0;<br>    margin: 0;<br>}<br>    fieldset, img {<br>    border: 0;<br>}<br>table {<br>    border-collapse: collapse;<br>    border-spacing: 0;<br>}<br>ol, ul {<br>    list-style: none;<br>}<br>address, caption, cite, code, dfn, em, strong, th, var {<br>    font-weight: normal;<br>    font-style: normal;<br>}<br>caption, th {<br>    text-align: left;<br>}<br>h1, h2, h3, h4, h5, h6 {<br>    font-weight: normal;<br>    font-size: 100%;<br>}<br>q:before, q:after {<br>    content: ”;<br>}<br>abbr, acronym {<br>    border: 0;<br>}</p>
+<p>九.Ateneu Popular CSS Reset</p>
+<p>html, body, div, span, applet, object, iframe, h1, h2, h3,<br>h4, h5, h6, p, blockquote, pre, a, abbr, acronym,<br>address, big, cite, code, del, dfn, em, font, img, ins,<br>kbd, q, s, samp, small, strike, strong, sub, sup, tt,<br>var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,<br>table, caption, tbody, tfoot, thead, tr, th, td {<br>    margin: 0;<br>    padding: 0;<br>    border: 0;<br>    outline: 0;<br>    font-weight: inherit;<br>    font-style: inherit;<br>    font-size: 100%;<br>    font-family: inherit;<br>    vertical-align: baseline;<br>}<br>:focus {<br>    outline: 0;<br>}<br>a, a:link, a:visited, a:hover, a:active{<br>    text-decoration:none<br>}<br>table {<br>    border-collapse: separate;<br>    border-spacing: 0;<br>}<br>th, td {<br>    text-align: left;<br>    font-weight: normal;<br>}<br>img, iframe {<br>    border: none;<br>    text-decoration:none;<br>}<br>ol, ul {<br>    list-style: none;<br>}<br>input, textarea, select, button {<br>    font-size: 100%;<br>    font-family: inherit;<br>}<br>select {<br>    margin: inherit;<br>}<br>hr {<br>    margin: 0;<br>    padding: 0;<br>    border: 0;<br>    color: #000;<br>    background-color: #000;<br>    height: 1px<br>}</p>
+<p>十.Chris Poteet’s Reset CSS</p>
+<ul>
+<li>{<br>  vertical-align: baseline;<br>  font-family: inherit;<br>  font-style: inherit;<br>  font-size: 100%;<br>  border: none;<br>  padding: 0;<br>  margin: 0;<br>}<br>body {<br>  padding: 5px;<br>}<br>h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {<br>  margin: 20px 0;<br>}<br>li, dd, blockquote {<br>  margin-left: 40px;<br>}<br>table {<br>  border-collapse: collapse;<br>  border-spacing: 0;<br>}</li>
+</ul>
+<p>十一.Tantek Celik Reset CSS</p>
+<p>:link,:visited { text-decoration:none }<br>ul,ol { list-style:none }<br>h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }<br>ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input<br>{ margin:0; padding:0 }<br>a img,:link img,:visited img { border:none }<br>address { font-style:normal }</p>
+<p>十二.Christian Montoya Reset CSS</p>
+<p>html, body, form, fieldset {<br>    margin: 0;<br>    padding: 0;<br>    font: 100%/120% Verdana, Arial, Helvetica, sans-serif;<br>}<br>h1, h2, h3, h4, h5, h6, p, pre,<br>blockquote, ul, ol, dl, address {<br>    margin: 1em 0;<br>    padding: 0;<br>}<br>li, dd, blockquote {<br>    margin-left: 1em;<br>}<br>form label {<br>    cursor: pointer;<br>}<br>fieldset {<br>    border: none;<br>}<br>input, select, textarea {<br>    font-size: 100%;<br>    font-family: inherit;<br>}</p>
+<p>十三.Rudeworks Reset CSS</p>
+<ul>
+<li>{<br>  margin: 0;<br>  padding: 0;<br>  border: none;<br>}<br>html {<br>  font: 62.5% “Lucida Grande”, Lucida, Verdana, sans-serif;<br>  text-shadow: #000 0px 0px 0px;<br>}<br>ul {<br>  list-style: none;<br>  list-style-type: none;<br>}<br>h1, h2, h3, h4, h5, h6, p, pre,<br>blockquote, ul, ol, dl, address {<br>  font-weight: normal;<br>  margin: 0 0 1em 0;<br>}<br>cite, em, dfn {<br>  font-style: italic;<br>}<br>sup {<br>  position: relative;<br>  bottom: 0.3em;<br>  vertical-align: baseline;<br>}<br>sub {<br>  position: relative;<br>  bottom: -0.2em;<br>  vertical-align: baseline;<br>}<br>li, dd, blockquote {<br>  margin-left: 1em;<br>}<br>code, kbd, samp, pre, tt, var, input[type=’text’], textarea {<br>  font-size: 100%;<br>  font-family: monaco, “Lucida Console”, courier, mono-space;<br>}<br>del {<br>  text-decoration: line-through;<br>}<br>ins, dfn {<br>  border-bottom: 1px solid #ccc;<br>}<br>small, sup, sub {<br>  font-size: 85%;<br>}<br>abbr, acronym {<br>  text-transform: uppercase;<br>  font-size: 85%;<br>  letter-spacing: .1em;<br>  border-bottom-style: dotted;<br>  border-bottom-width: 1px;<br>}<br>a abbr, a acronym {<br>  border: none;<br>}<br>sup {<br>  vertical-align: super;<br>}<br>sub {<br>  vertical-align: sub;<br>}<br>h1 {<br>  font-size: 2em;<br>}<br>h2 {<br>  font-size: 1.8em;<br>}<br>h3 {<br>  font-size: 1.6em;<br>}<br>h4 {<br>  font-size: 1.4em;<br>}<br>h5 {<br>  font-size: 1.2em;<br>}<br>h6 {<br>  font-size: 1em;<br>}<br>a, a:link, a:visited, a:hover, a:active {<br>  outline: 0;<br>  text-decoration: none;<br>}<br>a img {<br>  border: none;<br>  text-decoration: none;<br>}<br>img {<br>  border: none;<br>  text-decoration: none;<br>}<br>label, button {<br>  cursor: pointer;<br>}<br>input:focus, select:focus, textarea:focus {<br>  background-color: #FFF;<br>}<br>fieldset {<br>  border: none;<br>}<br>.clear {<br>  clear: both;<br>}<br>.float-left {<br>  float: left;<br>}<br>.float-right {<br>  float: right;<br>}<br>body {<br>  text-align: center;<br>}<br>#wrapper {<br>  margin: 0 auto;<br>  text-align: left;<br>}</li>
+</ul>
+<p>十四. Anieto2K Reset CSS</p>
+<p>html, body, div, span, applet, object, iframe,<br>h1, h2, h3, h4, h5, h6, p,<br>blockquote, pre, a, abbr, acronym, address, big,<br>cite, code, del, dfn, em, font, img,<br>ins, kbd, q, s, samp, small, strike,<br>strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,<br>fieldset, form, label, legend,<br>table, caption, tbody, tfoot, thead, tr, th, td,<br>center, u, b, i {<br>    margin: 0;<br>    padding: 0;<br>    border: 0;<br>    outline: 0;<br>    font-weight: normal;<br>    font-style: normal;<br>    font-size: 100%;<br>    font-family: inherit;<br>    vertical-align: baseline<br>}<br>body {<br>    line-height: 1<br>}<br>:focus {<br>    outline: 0<br>}<br>ol, ul {<br>    list-style: none<br>}<br>table {<br>    border-collapse: collapse;<br>    border-spacing: 0<br>}<br>blockquote:before, blockquote:after, q:before, q:after {<br>    content: “”<br>}<br>blockquote, q {<br>    quotes: “” “”<br>}<br>input, textarea {<br>    margin: 0;<br>    padding: 0<br>}<br>hr {<br>    margin: 0;<br>    padding: 0;<br>    border: 0;<br>    color: #000;<br>    background-color: #000;<br>    height: 1px<br>}</p>
+<p>十五.CSSLab CSS Reset</p>
+<p>html, body, div, span, applet, object, iframe, h1, h2, h3,<br>h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,<br>big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,<br>small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,<br>fieldset, form, label, legend, table, caption, tbody, tfoot,<br>thead, tr, th, td {<br>    margin: 0;<br>    padding: 0;<br>    border: 0;<br>    outline: 0;<br>    font-weight: inherit;<br>    font-style: inherit;<br>    font-size: 100%;<br>    font-family: inherit;<br>    vertical-align: baseline;<br>}<br>:focus {<br>    outline: 0;<br>}<br>table {<br>    border-collapse: separate;<br>    border-spacing: 0;<br>}<br>caption, th, td {<br>    text-align: left;<br>    font-weight: normal;<br>}<br>a img, iframe {<br>    border: none;<br>}<br>ol, ul {<br>    list-style: none;<br>}<br>input, textarea, select, button {<br>    font-size: 100%;<br>    font-family: inherit;<br>}<br>select {<br>    margin: inherit;<br>}<br>/<em> Fixes incorrect placement of numbers in ol’s in IE6/7 </em>/<br>ol { margin-left:2em; }<br>/<em> == clearfix == </em>/<br>.clearfix:after {<br>    content: “.”;<br>    display: block;<br>    height: 0;<br>    clear: both;<br>    visibility: hidden;<br>}<br>.clearfix {display: inline-block;} </p>
+<ul>
+<li>html .clearfix {height: 1%;}<br>.clearfix {display: block;}</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/css/">css</a><a href="/tags/浏览器兼容性/">浏览器兼容性</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/css/">css</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2016/01/14/css重置/" data-title="css重置样式 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/01/14/css适应/" title="图全屏显示适应各种分辨率">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  图全屏显示适应各种分辨率</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/01/11/hexo5/"  title="hexo个性化续">
+ <strong>NEXT:</strong><br/> 
+ <span>hexo个性化续
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/01/14/css重置/" data-title="css重置样式" data-url="http://yoursite.com/2016/01/14/css重置/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lfc625"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/categories/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/categories/bootstrap/" title="bootstrap">bootstrap<sup>3</sup></a></li>
+		
+			<li><a href="/categories/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>1</sup></a></li>
+		
+			<li><a href="/categories/开发工具/" title="开发工具">开发工具<sup>1</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/HTML/" title="HTML">HTML<sup>1</sup></a></li>
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/tags/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>4</sup></a></li>
+		
+			<li><a href="/tags/css/" title="css">css<sup>3</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+		
+			<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+		
+			<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
+		
+			<li><a href="/tags/博客/" title="博客">博客<sup>6</sup></a></li>
+		
+			<li><a href="/tags/性能优化/" title="性能优化">性能优化<sup>1</sup></a></li>
+		
+			<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/tags/浏览器兼容性/" title="浏览器兼容性">浏览器兼容性<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Alex in China <br/>
+			欢迎来到我的个人博客瞅一瞅</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/3375916192" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/alex_lfc6" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/lfc625" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="liaofeic">liaofeic</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"lfc625"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
