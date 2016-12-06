@@ -1,0 +1,518 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>jq选择器 | Alex&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="liaofeic">
+    
+    <meta name="description" content="基本选择
+#id
+.class
+element
+‘ * ‘
+seletcor1,selector2,selector3
+
+
+层次选择
+$(an des) 后代
+$(par&amp;gt;child) 父子选择
+$(pre+next) 紧接的同级  等价.next()
+$(pre~siblings) 之后的所">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="alex_lfc6" />
+    <meta name="twitter:title" content="jq选择器 | Alex&#39;s Blog" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/cat.png" alt="Alex&#39;s Blog" title="Alex&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Alex&#39;s Blog">Alex&#39;s Blog</a></h1>
+				<h2 class="blog-motto">不要让他人的观点掩盖你内心的声音。最重要的是，要有勇气追随自己的内心和直觉!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">时光机</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tool">工具</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/30/JQ选择器/" title="jq选择器" itemprop="url">jq选择器</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-09-29T16:00:00.000Z" itemprop="datePublished">2016-09-30</time>
+    更新日期:<time datetime="2016-12-06T12:10:03.653Z" itemprop="dateModified">2016-12-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#u57FA_u672C_u9009_u62E9"><span class="toc-number">1.</span> <span class="toc-text">基本选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C42_u6B21_u9009_u62E9"><span class="toc-number">2.</span> <span class="toc-text">层次选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8FC7_u6EE4_u9009_u62E9"><span class="toc-number">3.</span> <span class="toc-text">过滤选择</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#u5185_u5BB9_u8FC7_u6EE4"><span class="toc-number">3.0.1.</span> <span class="toc-text">内容过滤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u53EF_u89C1_u6027"><span class="toc-number">3.0.2.</span> <span class="toc-text">可见性</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u5C5E_u6027_u8FC7_u6EE4"><span class="toc-number">3.0.3.</span> <span class="toc-text">属性过滤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u5B50_u5143_u7D20_u8FC7_u6EE4_u9009_u62E9_u5668"><span class="toc-number">3.0.4.</span> <span class="toc-text">子元素过滤选择器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u8868_u5355_u5BF9_u8C61_u8FC7_u6EE4_u9009_u62E9_u5668"><span class="toc-number">3.0.5.</span> <span class="toc-text">表单对象过滤选择器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8868_u5355_u9009_u62E9"><span class="toc-number">4.</span> <span class="toc-text">表单选择</span></a></li></ol>
+		</div>
+		
+		<h4 id="u57FA_u672C_u9009_u62E9"><a href="#u57FA_u672C_u9009_u62E9" class="headerlink" title="基本选择"></a>基本选择</h4><ol>
+<li>#id</li>
+<li>.class</li>
+<li>element</li>
+<li>‘ * ‘</li>
+<li>seletcor1,selector2,selector3</li>
+</ol>
+<hr>
+<h4 id="u5C42_u6B21_u9009_u62E9"><a href="#u5C42_u6B21_u9009_u62E9" class="headerlink" title="层次选择"></a>层次选择</h4><ol>
+<li>$(an des) 后代</li>
+<li>$(par&gt;child) 父子选择</li>
+<li>$(pre+next) 紧接的同级  等价.next()</li>
+<li>$(pre~siblings) 之后的所有同级  等价.nextAll()</li>
+</ol>
+<hr>
+<h4 id="u8FC7_u6EE4_u9009_u62E9"><a href="#u8FC7_u6EE4_u9009_u62E9" class="headerlink" title="过滤选择"></a>过滤选择</h4><ol>
+<li>:first</li>
+<li>:last</li>
+<li>:not(selector)</li>
+<li>:even</li>
+<li>: odd</li>
+<li>:eq(index)</li>
+<li>:gt(index)</li>
+<li>:lt(index)</li>
+<li>:header</li>
+<li>:animated</li>
+</ol>
+<h6 id="u5185_u5BB9_u8FC7_u6EE4"><a href="#u5185_u5BB9_u8FC7_u6EE4" class="headerlink" title="内容过滤"></a>内容过滤</h6><ol>
+<li>:contains(text)</li>
+<li>:empty</li>
+<li>:has(selector)</li>
+<li>:parent<h6 id="u53EF_u89C1_u6027"><a href="#u53EF_u89C1_u6027" class="headerlink" title="可见性"></a>可见性</h6></li>
+<li>:hidden</li>
+<li>:visible<h6 id="u5C5E_u6027_u8FC7_u6EE4"><a href="#u5C5E_u6027_u8FC7_u6EE4" class="headerlink" title="属性过滤"></a>属性过滤</h6></li>
+<li>[attribute]</li>
+<li>[attribute=value]</li>
+<li>[attribute!=value]</li>
+<li>[attribute^=value]</li>
+<li>[attribute&amp;=value]</li>
+<li>[attribute*=value]</li>
+<li>[selector1][selector2][selectorN]<h6 id="u5B50_u5143_u7D20_u8FC7_u6EE4_u9009_u62E9_u5668"><a href="#u5B50_u5143_u7D20_u8FC7_u6EE4_u9009_u62E9_u5668" class="headerlink" title="子元素过滤选择器"></a>子元素过滤选择器</h6></li>
+<li>:nth-child</li>
+<li>:first-child</li>
+<li>:last-child</li>
+<li>: only-child<h6 id="u8868_u5355_u5BF9_u8C61_u8FC7_u6EE4_u9009_u62E9_u5668"><a href="#u8868_u5355_u5BF9_u8C61_u8FC7_u6EE4_u9009_u62E9_u5668" class="headerlink" title="表单对象过滤选择器"></a>表单对象过滤选择器</h6></li>
+<li>:enabled</li>
+<li>:disabled</li>
+<li>:checked</li>
+<li>: selected</li>
+</ol>
+<hr>
+<h4 id="u8868_u5355_u9009_u62E9"><a href="#u8868_u5355_u9009_u62E9" class="headerlink" title="表单选择"></a>表单选择</h4><ol>
+<li>:input</li>
+<li>:text</li>
+<li>:password</li>
+<li>:radio</li>
+<li>:checkbox</li>
+<li>: submit</li>
+<li>:image</li>
+<li>:reset</li>
+<li>:button</li>
+<li>:file</li>
+<li>:hidden</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/jq/">jq</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/jq/">jq</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2016/09/30/JQ选择器/" data-title="jq选择器 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/09/30/js中的call()和apply()的方法/" title="call和apply">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  call和apply</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/09/22/居中的几种常见办法/"  title="居中的一些认识">
+ <strong>NEXT:</strong><br/> 
+ <span>居中的一些认识
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/09/30/JQ选择器/" data-title="jq选择器" data-url="http://yoursite.com/2016/09/30/JQ选择器/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lfc625"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#u57FA_u672C_u9009_u62E9"><span class="toc-number">1.</span> <span class="toc-text">基本选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C42_u6B21_u9009_u62E9"><span class="toc-number">2.</span> <span class="toc-text">层次选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8FC7_u6EE4_u9009_u62E9"><span class="toc-number">3.</span> <span class="toc-text">过滤选择</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#u5185_u5BB9_u8FC7_u6EE4"><span class="toc-number">3.0.1.</span> <span class="toc-text">内容过滤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u53EF_u89C1_u6027"><span class="toc-number">3.0.2.</span> <span class="toc-text">可见性</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u5C5E_u6027_u8FC7_u6EE4"><span class="toc-number">3.0.3.</span> <span class="toc-text">属性过滤</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u5B50_u5143_u7D20_u8FC7_u6EE4_u9009_u62E9_u5668"><span class="toc-number">3.0.4.</span> <span class="toc-text">子元素过滤选择器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#u8868_u5355_u5BF9_u8C61_u8FC7_u6EE4_u9009_u62E9_u5668"><span class="toc-number">3.0.5.</span> <span class="toc-text">表单对象过滤选择器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8868_u5355_u9009_u62E9"><span class="toc-number">4.</span> <span class="toc-text">表单选择</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/categories/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/categories/bootstrap/" title="bootstrap">bootstrap<sup>3</sup></a></li>
+		
+			<li><a href="/categories/css/" title="css">css<sup>6</sup></a></li>
+		
+			<li><a href="/categories/es6/" title="es6">es6<sup>1</sup></a></li>
+		
+			<li><a href="/categories/jq/" title="jq">jq<sup>2</sup></a></li>
+		
+			<li><a href="/categories/js/" title="js">js<sup>1</sup></a></li>
+		
+			<li><a href="/categories/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+		
+			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>1</sup></a></li>
+		
+			<li><a href="/categories/工具/" title="工具">工具<sup>1</sup></a></li>
+		
+			<li><a href="/categories/开发工具/" title="开发工具">开发工具<sup>1</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/categories/浏览器/" title="浏览器">浏览器<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/HTML/" title="HTML">HTML<sup>1</sup></a></li>
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+		
+			<li><a href="/tags/angular/" title="angular">angular<sup>1</sup></a></li>
+		
+			<li><a href="/tags/bootstrap/" title="bootstrap">bootstrap<sup>4</sup></a></li>
+		
+			<li><a href="/tags/css/" title="css">css<sup>6</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>4</sup></a></li>
+		
+			<li><a href="/tags/es6/" title="es6">es6<sup>1</sup></a></li>
+		
+			<li><a href="/tags/jq/" title="jq">jq<sup>2</sup></a></li>
+		
+			<li><a href="/tags/js/" title="js">js<sup>1</sup></a></li>
+		
+			<li><a href="/tags/sublime/" title="sublime">sublime<sup>2</sup></a></li>
+		
+			<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
+		
+			<li><a href="/tags/博客/" title="博客">博客<sup>1</sup></a></li>
+		
+			<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+		
+			<li><a href="/tags/性能优化/" title="性能优化">性能优化<sup>1</sup></a></li>
+		
+			<li><a href="/tags/杂谈/" title="杂谈">杂谈<sup>1</sup></a></li>
+		
+			<li><a href="/tags/浏览器/" title="浏览器">浏览器<sup>1</sup></a></li>
+		
+			<li><a href="/tags/浏览器兼容性/" title="浏览器兼容性">浏览器兼容性<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Alex in China <br/>
+			欢迎来到我的个人博客瞅一瞅</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/3375916192" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/alex_lfc6" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/lfc625" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="liaofeic">liaofeic</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"lfc"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
