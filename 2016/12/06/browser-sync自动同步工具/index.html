@@ -4,25 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>hexo介绍 | Alex&#39;s Blog</title>
+    <title>Alex&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="liaofeic">
     
-    <meta name="description" content="hexo介绍hexo是一款基于Node.js的静态博客框架
-特性
+    <meta name="description" content="browser-sync同步测试工具&amp;emsp;&amp;emsp;以前看到大神们用两个屏幕码代码感觉特别酷，觊觎好久了。尤其对于前端的同学来说，一个屏幕写代码，另一个屏幕看效果，甚至是你的手机，pad都可以摆出来，按下ctrl+s所有的设备都会同步刷新，多么惬意。
 
-风一般的速度Hexo基于Node.js，支持多进程，几百篇文章也可以秒生成。
-
-流畅的撰写支持GitHub Flavored Markdown和所有Octopress的插件。
-
-扩展性Hexo支持EJS、Swig和Stylus。通过">
+如何安装首先你需要安装node环境，上">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="alex_lfc6" />
-    <meta name="twitter:title" content="hexo介绍 | Alex&#39;s Blog" />
+    <meta name="twitter:title" content="Alex&#39;s Blog" />
       
     
     
@@ -83,15 +78,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/10/hexo1/" title="hexo介绍" itemprop="url">hexo介绍</a>
+      <a href="/2016/12/06/browser-sync自动同步工具/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="liaofeic">liaofeic</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-01-10T14:53:18.000Z" itemprop="datePublished">2016-01-10</time>
-    更新日期:<time datetime="2016-01-13T15:26:10.240Z" itemprop="dateModified">2016-01-13</time>
+    <time datetime="2016-12-06T11:53:59.731Z" itemprop="datePublished">2016-12-06</time>
+    更新日期:<time datetime="2016-06-05T03:41:36.397Z" itemprop="dateModified">2016-06-05</time>
     
   </p>
 </header>
@@ -100,50 +95,35 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo_u4ECB_u7ECD"><span class="toc-number">1.</span> <span class="toc-text">hexo介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7279_u6027"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5FEB_u901F_u5165_u95E8"><span class="toc-number">3.</span> <span class="toc-text">快速入门</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#browser-sync_u540C_u6B65_u6D4B_u8BD5_u5DE5_u5177"><span class="toc-number">1.</span> <span class="toc-text">browser-sync同步测试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u5982_u4F55_u5B89_u88C5"><span class="toc-number">1.0.1.</span> <span class="toc-text">如何安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u5982_u4F55_u4F7F_u7528"><span class="toc-number">1.0.2.</span> <span class="toc-text">如何使用</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<h4 id="hexo_u4ECB_u7ECD"><a href="#hexo_u4ECB_u7ECD" class="headerlink" title="hexo介绍"></a>hexo介绍</h4><p>hexo是一款基于Node.js的静态博客框架</p>
-<h4 id="u7279_u6027"><a href="#u7279_u6027" class="headerlink" title="特性"></a>特性</h4><blockquote>
-<ul>
-<li><p>风一般的速度<br>Hexo基于Node.js，支持多进程，几百篇文章也可以秒生成。</p>
-</li>
-<li><p>流畅的撰写<br>支持GitHub Flavored Markdown和所有Octopress的插件。</p>
-</li>
-<li><p>扩展性<br>Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.</p>
-</li>
-</ul>
-</blockquote>
-<h4 id="u5FEB_u901F_u5165_u95E8"><a href="#u5FEB_u901F_u5165_u95E8" class="headerlink" title="快速入门"></a>快速入门</h4><p>使用</p>
-<p>首先在使用之前我们需要一点node.js和git基础。<br>这两个的安装其实是非常简单，无脑下一步，大家搜索一下很容易就能上手的，<br>对于广大的技术宅都是小菜一碟了。</p>
-<p>安装</p>
-<p>前提是必须先安装 Node.js，以下命令可以在CMD工具中打开，但是我建议大家还是用git bash。<br><code>npm install hexo -g</code><br>npm是node的包管理工具，仅需一步就把 Hexo 安装好</p>
-<p>升级</p>
-<p>更新hexo到最新版<br><code>npm update hexo -g</code><br>初始化</p>
-<p><code>hexo init &lt;folder&gt;</code><br>folder便是文件夹名了<br>如果指定 <folder>，便会在目前的资料夹建立一个名为 <folder> 的新资料夹；否则会在目前资料夹初始化。</folder></folder></p>
-<p>之后需要安装一些node需要用的模块 命令如下<br><code>npm install</code></p>
-<p>创建新博客</p>
-<p><code>hexo new &quot;Hello World&quot;</code><br>生成网站<br><code>hexo generate</code><br>服务器<br><code>hexo server</code><br>服务器会跑在 <a href="http://localhost:port" target="_blank" rel="external">http://localhost:port</a> （port 预设为 4000，可在 _config.yml 设定）</p>
+		<h3 id="browser-sync_u540C_u6B65_u6D4B_u8BD5_u5DE5_u5177"><a href="#browser-sync_u540C_u6B65_u6D4B_u8BD5_u5DE5_u5177" class="headerlink" title="browser-sync同步测试工具"></a>browser-sync同步测试工具</h3><p>&emsp;&emsp;以前看到大神们用两个屏幕码代码感觉特别酷，觊觎好久了。尤其对于前端的同学来说，一个屏幕写代码，另一个屏幕看效果，甚至是你的手机，pad都可以摆出来，按下ctrl+s所有的设备都会同步刷新，多么惬意。</p>
+<hr>
+<h5 id="u5982_u4F55_u5B89_u88C5"><a href="#u5982_u4F55_u5B89_u88C5" class="headerlink" title="如何安装"></a>如何安装</h5><p>首先你需要安装node环境，上官网下载，然后安装就可以了。<br>在你的命令行中</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span><span class="identifier"> </span><span class="title">-v</span> </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>如果能看到正确的版本信息就代表安装成功了</p>
+<p>使用npm来安装我们需要的browser-sync</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> browser-<span class="keyword">sync</span></span></span><br></pre></td></tr></table></figure>
+<p>这样就在全局安装好了<br>之后转到项目目录</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> -browser-sync</span><br></pre></td></tr></table></figure>
+<p>这样你就可以使用它了</p>
+<h5 id="u5982_u4F55_u4F7F_u7528"><a href="#u5982_u4F55_u4F7F_u7528" class="headerlink" title="如何使用"></a>如何使用</h5><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser-<span class="keyword">sync</span> start --server --<span class="keyword">files</span> <span class="string">"css/*.css"</span></span><br></pre></td></tr></table></figure>
+<p>非常简单的，在项目目录下运行此命令就会自动启动一个浏览器当然–files 后面的就是需要监听变化的文件，就像上面一样我们监听了所有css文件夹下的css文件，如果它们发生了变化我们的页面就会自动刷新哦！！！</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">browser-sync </span>start --proxy <span class="string">"主机名"</span> <span class="string">"**"</span></span><br></pre></td></tr></table></figure>
+<p>这是我常用的一个命令 –proxy代理 比如我们的tomcat通常会在8080端口，我们用代理就可以轻松监听8080端口了， **自然是监听所有文件的变化了（懒癌又犯了）</p>
+<hr>
+<p>最后的最后你可以选择gulp或grunt来搭配使用。cool<del>~</del></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/博客/">博客</a>
-  </div>
-
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
-</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/01/10/hexo1/" data-title="hexo介绍 | Alex&#39;s Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/12/06/browser-sync自动同步工具/" data-title="Alex&#39;s Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -152,19 +132,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/01/11/hexo4/" title="hexo优化，个性化设置">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  hexo优化，个性化设置</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/01/10/hexo2/"  title="hexo搭建">
+<a href="/2016/12/06/ES6的八个特性/"  title="">
  <strong>NEXT:</strong><br/> 
- <span>hexo搭建
+ <span>(no title)
 </span>
 </a>
 </div>
@@ -174,7 +146,7 @@
 	
 <section class="comment">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016/01/10/hexo1/" data-title="hexo介绍" data-url="http://yoursite.com/2016/01/10/hexo1/"></div>
+	<div class="ds-thread" data-thread-key="2016/12/06/browser-sync自动同步工具/" data-title="" data-url="http://yoursite.com/2016/12/06/browser-sync自动同步工具/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -196,7 +168,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo_u4ECB_u7ECD"><span class="toc-number">1.</span> <span class="toc-text">hexo介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u7279_u6027"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u5FEB_u901F_u5165_u95E8"><span class="toc-number">3.</span> <span class="toc-text">快速入门</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#browser-sync_u540C_u6B65_u6D4B_u8BD5_u5DE5_u5177"><span class="toc-number">1.</span> <span class="toc-text">browser-sync同步测试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u5982_u4F55_u5B89_u88C5"><span class="toc-number">1.0.1.</span> <span class="toc-text">如何安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u5982_u4F55_u4F7F_u7528"><span class="toc-number">1.0.2.</span> <span class="toc-text">如何使用</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
@@ -216,7 +188,7 @@
 		
 			<li><a href="/categories/css/" title="css">css<sup>3</sup></a></li>
 		
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>0</sup></a></li>
 		
 			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>1</sup></a></li>
 		
@@ -249,13 +221,13 @@
 		
 			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
 		
-			<li><a href="/tags/hexo/" title="hexo">hexo<sup>5</sup></a></li>
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>0</sup></a></li>
 		
 			<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
 		
 			<li><a href="/tags/web/" title="web">web<sup>1</sup></a></li>
 		
-			<li><a href="/tags/博客/" title="博客">博客<sup>6</sup></a></li>
+			<li><a href="/tags/博客/" title="博客">博客<sup>1</sup></a></li>
 		
 			<li><a href="/tags/性能优化/" title="性能优化">性能优化<sup>1</sup></a></li>
 		
@@ -270,7 +242,7 @@
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li></ul>
   </div>
 
 
