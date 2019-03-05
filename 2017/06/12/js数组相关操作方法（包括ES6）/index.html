@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>数组操作方法 - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2017-06-12">2017-06-12</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">数组操作方法</h2>
+            <!-- <div class="post-meta">本文总共726个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="u521B_u5EFA_u4E00_u4E2Aarray"><a href="#u521B_u5EFA_u4E00_u4E2Aarray" class="headerlink" title="创建一个array"></a>创建一个array</h2><blockquote>
+<p>new Array() 可以传入一个数字。</p>
+<p>存在稀疏数组这个概念</p>
+<p>数组操作方法</p>
+</blockquote>
+<ol>
+<li>push 数组末尾添加一个元素</li>
+<li>unshift 数组首部添加一个元素</li>
+<li>delete a[0] 可以删除一个元素(该位置还存在 变成一个undefined)</li>
+<li>join(),将数组中的所有元素转化为字符串，并返回，可以传入一个分隔符</li>
+<li>reverse() 数组翻转</li>
+<li>sort() 排序，默认字母表顺序，或者传一个比较函数</li>
+<li>concat() 创建返回一个新数组。新数组包括源和参数的组合</li>
+<li>slice() 返回制定数组的一个片段或子数组<br>一个起始位置（包含），一个末尾位置（不包含）</li>
+<li>splice() 插入或者删除元素 第一个参数为位置，第二个为个数，返回的是删除</li>
+<li>push在尾部添加一个或者多个元素，pop删除数组的最后一个元素，减小数组长度并返回删除的值</li>
+<li>unshift在头部添加，shift()删除数组的第一个元素并将其返回。</li>
+<li>toString()和toLocalString()</li>
+<li>forEach()遍历数组 三个参数，数组元素，索引，数组本身<br>无法break;只能try catch抛出异常</li>
+<li>map()方法将调用的数组的每个元素传递给制定的函数，并返回一个数组，包含该函数的返回值。</li>
+<li>filter()方法返回的数组元素是调用的数组的一个子集。</li>
+<li>every()和some()</li>
+<li>reduce和reduceRight()</li>
+<li>indexOf和lastIndexOf</li>
+</ol>
+<blockquote>
+<p>数组遍历</p>
+<ul>
+<li>[ 在嵌套以及数据量大时候应该要缓存数组的length而不是每次循环都去遍历 ] </li>
+</ul>
+</blockquote>
+<p>还可以使用forEach（不能使用for in 会枚举出array.prototype的属性）</p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/angular/">angular</a>
+            
+            <a href="/tags/bootstrap/">bootstrap</a>
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/06/12/js数组相关操作方法（包括ES6）/';
+        this.page.identifier = '2017/06/12/js数组相关操作方法（包括ES6）/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

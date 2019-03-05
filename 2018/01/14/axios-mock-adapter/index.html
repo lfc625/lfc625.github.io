@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>axios-mock - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2018-01-14">2018-01-14</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">axios-mock</h2>
+            <!-- <div class="post-meta">本文总共5376个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <blockquote>
+<p>Mock 一个get请求</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> axios = <span class="built_in">require</span>(<span class="string">'axios'</span>);</span><br><span class="line"><span class="keyword">var</span> MockAdapter = <span class="built_in">require</span>(<span class="string">'axios-mock-adapter'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// This sets the mock adapter on the default instance</span></span><br><span class="line"><span class="keyword">var</span> mock = <span class="keyword">new</span> MockAdapter(axios);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Mock any GET request to /users</span></span><br><span class="line"><span class="comment">// arguments for reply are (status, data, headers)</span></span><br><span class="line">mock.onGet(<span class="string">'/users'</span>).reply(<span class="number">200</span>, &#123;</span><br><span class="line">  users: [</span><br><span class="line">    &#123; id: <span class="number">1</span>, name: <span class="string">'John Smith'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">axios.get(<span class="string">'/users'</span>)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response.data);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Mock一个有参数的get请求</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> axios = <span class="built_in">require</span>(<span class="string">'axios'</span>);</span><br><span class="line"><span class="keyword">var</span> MockAdapter = <span class="built_in">require</span>(<span class="string">'axios-mock-adapter'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// This sets the mock adapter on the default instance</span></span><br><span class="line"><span class="keyword">var</span> mock = <span class="keyword">new</span> MockAdapter(axios);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Mock any GET request to /users</span></span><br><span class="line"><span class="comment">// arguments for reply are (status, data, headers)</span></span><br><span class="line">mock.onGet(<span class="string">'/users'</span>, &#123; params: &#123; searchText: <span class="string">'John'</span> &#125; &#125;).reply(<span class="number">200</span>, &#123;</span><br><span class="line">  users: [</span><br><span class="line">    &#123; id: <span class="number">1</span>, name: <span class="string">'John Smith'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">axios.get(<span class="string">'/users'</span>, &#123; params: &#123; searchText: <span class="string">'John'</span> &#125; &#125; )</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response.data);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如何延时响应</p>
+</blockquote>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// All requests using this<span class="instruction"> instance </span>will have a 2 seconds delay:</span><br><span class="line">var mock =<span class="instruction"> new </span>MockAdapter(axiosInstance, &#123; delayResponse: 2000 &#125;<span class="function">)</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>You can restore the original adapter (which will remove the mocking behavior)</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">mock</span><span class="class">.restore</span>();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>You can also reset the registered mock handlers with reset</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">mock</span><span class="class">.reset</span>();</span><br></pre></td></tr></table></figure>
+<p>reset is different from restore in that restore removes the mocking from the axios instance completely, whereas reset only removes all mock handlers that were added with onGet, onPost, etc. but leaves the mocking in place.</p>
+<blockquote>
+<p>用一个函数去响应</p>
+</blockquote>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mock.onGet(<span class="string">'/users'</span>).reply(<span class="function"><span class="keyword">function</span><span class="params">(config)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// `config` is the axios config and contains things like the url</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// return an array in the form of [status, data, headers]</span></span><br><span class="line">  <span class="keyword">return</span> [<span class="number">200</span>, &#123;</span><br><span class="line">    users: [</span><br><span class="line">      &#123; id: <span class="number">1</span>, name: <span class="string">'John Smith'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;];</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用正则</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mock.onGet(<span class="regexp">/\/users\/\d+/</span>).reply(<span class="function"><span class="keyword">function</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// the actual id can be grabbed from config.url</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [<span class="number">200</span>, &#123;&#125;];</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Specify no path to match by verb alone</p>
+</blockquote>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// <span class="keyword">Reject</span> <span class="keyword">all</span> POST requests <span class="keyword">with</span> HTTP <span class="number">500</span></span><br><span class="line">mock.onPost().reply(<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>支持链式书写</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">mock</span></span><br><span class="line">  .<span class="built_in">on</span>Get(<span class="string">'/users'</span>).reply(<span class="number">200</span>, users)</span><br><span class="line">  .<span class="built_in">on</span>Get(<span class="string">'/posts'</span>).reply(<span class="number">200</span>, posts);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>.replyOnce() 可以只响应一次</p>
+</blockquote>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mock</span><br><span class="line">  .onGet(<span class="string">'/users'</span>).replyOnce(<span class="number">200</span>, users) <span class="comment">// After the first request to /users, this handler is removed</span></span><br><span class="line">  .onGet(<span class="string">'/users'</span>).replyOnce(<span class="number">500</span>);       <span class="comment">// The second request to /users will have status code 500</span></span><br><span class="line">                                         <span class="comment">// Any following request would return a 404 since there are</span></span><br><span class="line">                                         <span class="comment">// no matching handlers left</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Mocking一个地址</p>
+</blockquote>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mocks GET, POST, ... requests to /foo</span></span><br><span class="line">mock.onAny(<span class="string">'/foo'</span>).reply(<span class="number">200</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>.onAny can be useful when you want to test for a specific order of requests</p>
+</blockquote>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// <span class="type">Expected</span> order <span class="keyword">of</span> requests:</span><br><span class="line"><span class="keyword">const</span> responses = [</span><br><span class="line">  ['<span class="type">GET</span>',  '/foo', <span class="number">200</span>, &#123; foo: 'bar' &#125;],</span><br><span class="line">  ['<span class="type">POST</span>', '/bar', <span class="number">200</span>],</span><br><span class="line">  ['<span class="type">PUT</span>',  '/baz', <span class="number">200</span>]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// <span class="type">Match</span> <span class="type">ALL</span> requests</span><br><span class="line">mock.onAny().reply(config =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> [<span class="keyword">method</span>, url, ...response] = responses.shift();</span><br><span class="line">  <span class="keyword">if</span> (config.url === url &amp;&amp; config.<span class="keyword">method</span>.toUpperCase() === <span class="keyword">method</span>) <span class="keyword">return</span> response;</span><br><span class="line">  // <span class="type">Unexpected</span> request, error <span class="keyword">out</span></span><br><span class="line">  <span class="keyword">return</span> [<span class="number">500</span>, &#123;&#125;];</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Requests that do not map to a mock handler are rejected with a HTTP 404 response. Since handlers are matched in order, a final onAny() can be used to change the default behaviour</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Mock GET requests <span class="keyword">to</span> /foo, <span class="keyword">reject</span> <span class="keyword">all</span> <span class="keyword">others</span> <span class="keyword">with</span> HTTP <span class="number">500</span></span><br><span class="line">mock</span><br><span class="line">  .onGet('/foo').reply(<span class="number">200</span>)</span><br><span class="line">  .onAny().reply(<span class="number">500</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Mocking a request with a specific request body/data</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">mock</span><span class="class">.onPut</span>(<span class="string">'/product'</span>, &#123; <span class="attribute">id</span>: <span class="number">4</span>, <span class="attribute">name</span>: <span class="string">'foo'</span> &#125;)<span class="class">.reply</span>(<span class="number">204</span>);</span><br></pre></td></tr></table></figure>
+<p>.passThrough() forwards the matched request over network</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mock POST requests to /api with HTTP 201, but forward</span></span><br><span class="line"><span class="comment">// GET requests to server</span></span><br><span class="line">mock</span><br><span class="line">  .onPost(<span class="regexp">/\/^api/</span>).reply(<span class="number">201</span>)</span><br><span class="line">  .onGet(<span class="regexp">/\/^api/</span>).passThrough();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Recall that the order of handlers is significant</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mock specific requests, but let unmatched ones through</span></span><br><span class="line"><span class="tag">mock</span></span><br><span class="line">  <span class="class">.onGet</span>(<span class="string">'/foo'</span>)<span class="class">.reply</span>(<span class="number">200</span>)</span><br><span class="line">  <span class="class">.onPut</span>(<span class="string">'/bar'</span>, &#123; <span class="attribute">xyz</span>: <span class="string">'abc'</span> &#125;)<span class="class">.reply</span>(<span class="number">204</span>)</span><br><span class="line">  <span class="class">.onAny</span>()<span class="class">.passThrough</span>();</span><br></pre></td></tr></table></figure>
+<p>Note that passThrough requests are not subject to delaying by delayResponse.</p>
+<p>As of 1.7.0, reply function may return a Promise:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">mock</span><span class="class">.onGet</span>(<span class="string">'/product'</span>)<span class="class">.reply</span>(<span class="function">function</span>(config) &#123;</span><br><span class="line">  <span class="tag">return</span> <span class="tag">new</span> <span class="tag">Promise</span>(<span class="function">function</span>(resolve, reject) &#123;</span><br><span class="line">    <span class="tag">setTimeout</span>(<span class="function">function</span>() &#123;</span><br><span class="line">      <span class="tag">if</span> (Math.<span class="function">random</span>() &gt; <span class="tag">0</span><span class="class">.1</span>) &#123;</span><br><span class="line">        <span class="tag">resolve</span>([<span class="number">200</span>, &#123; <span class="attribute">id</span>: <span class="number">4</span>, <span class="attribute">name</span>: <span class="string">'foo'</span> &#125; ]);</span><br><span class="line">      &#125; <span class="tag">else</span> &#123;</span><br><span class="line">        <span class="comment">// reject() reason will be passed as-is.</span></span><br><span class="line">        <span class="comment">// Use HTTP error status code to simulate server failure.</span></span><br><span class="line">        <span class="tag">resolve</span>([<span class="number">500</span>, &#123; <span class="attribute">success</span>: false &#125; ]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="tag">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Composing from multiple sources with Promises:</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> normalAxios = axios.create();</span><br><span class="line"><span class="keyword">var</span> mockAxios = axios.create();</span><br><span class="line"><span class="keyword">var</span> mock = MockAdapter(mockAxios);</span><br><span class="line"></span><br><span class="line">mock</span><br><span class="line">  .onGet(<span class="string">'/orders'</span>)</span><br><span class="line">  .reply(() =&gt; Promise.all([</span><br><span class="line">      normalAxios</span><br><span class="line">        .<span class="literal">get</span>(<span class="string">'/api/v1/orders'</span>)</span><br><span class="line">        .then(resp =&gt; resp.data),</span><br><span class="line">      normalAxios</span><br><span class="line">        .<span class="literal">get</span>(<span class="string">'/api/v2/orders'</span>)</span><br><span class="line">        .then(resp =&gt; resp.data),</span><br><span class="line">      &#123; id: <span class="string">'-1'</span>, content: <span class="string">'extra row 1'</span> &#125;,</span><br><span class="line">      &#123; id: <span class="string">'-2'</span>, content: <span class="string">'extra row 2'</span> &#125;</span><br><span class="line">    ]).then(</span><br><span class="line">      sources =&gt; [<span class="number">200</span>, sources.reduce((agg, source) =&gt; agg.concat(source))]</span><br><span class="line">    )</span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/14/axios-mock-adapter/';
+        this.page.identifier = '2018/01/14/axios-mock-adapter/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

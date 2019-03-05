@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>js简写技巧 - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2018-09-30">2018-09-30</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">js简写技巧</h2>
+            <!-- <div class="post-meta">本文总共4193个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <ol>
+<li>三元操作符</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> answer = x &gt; <span class="number">10</span> ? <span class="string">" greater than 10"</span> : x</span><br></pre></td></tr></table></figure>
+<ol>
+<li>缩短求值简写</li>
+</ol>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="annotation">variable</span><span class="number">1</span> !== null || <span class="annotation">variable</span><span class="number">1</span> !== undefined || <span class="annotation">variable</span><span class="number">1</span> !== <span class="string">''</span>) &#123;</span><br><span class="line">     <span class="keyword">let</span> <span class="annotation">variable</span><span class="number">2</span> = <span class="annotation">variable</span><span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简写：</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const <span class="annotation">variable</span><span class="number">2</span> = <span class="annotation">variable</span><span class="number">1</span>  || <span class="string">'new'</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>变量声明速简写</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x;</span><br><span class="line"><span class="built_in">let</span> y;</span><br><span class="line"><span class="built_in">let</span> z = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p>简写</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x, y, z=<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>If 条件为真的简写</li>
+</ol>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="comment">(likeJavaScript)</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>JavaScript for 循环简写</li>
+</ol>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (let <span class="keyword">index</span> <span class="keyword">of</span> allImgs)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logArrayElements</span><span class="params">(element, <span class="keyword">index</span>, <span class="keyword">array</span>)</span> <span class="comment">&#123;</span><br><span class="line">  console.log("a[" + index + "] = " + element);</span><br><span class="line">&#125;</span></span><br><span class="line">[2, 5, 9].<span class="title">forEach</span><span class="params">(logArrayElements)</span>;</span></span><br><span class="line"><span class="comment">// logs:</span></span><br><span class="line"><span class="comment">// a[0] = 2</span></span><br><span class="line"><span class="comment">// a[1] = 5</span></span><br><span class="line"><span class="comment">// a[2] = 9</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>缩短求值</li>
+</ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">let</span> dbHost;</span><br><span class="line"><span class="title">if</span> (process.env.DB_HOST) &#123;</span><br><span class="line">  <span class="title">dbHost</span> = process.env.DB_HOST;</span><br><span class="line">&#125; <span class="title">else</span> &#123;</span><br><span class="line">  <span class="title">dbHost</span> = <span class="string">'localhost'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dbHost = process.env.DB_HOST || <span class="string">'localhost'</span>;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>十进制数指数</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (let i = <span class="number">0</span>; i &lt; <span class="number">1e7</span>; i++) &#123;&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 以下将全部求值为 true </span></span><br><span class="line"><span class="number">1e0</span> === <span class="number">1</span>;</span><br><span class="line"><span class="number">1e1</span> === <span class="number">10</span>;</span><br><span class="line"><span class="number">1e2</span> === <span class="number">100</span>;</span><br><span class="line"><span class="number">1e3</span> === <span class="number">1000</span>;</span><br><span class="line"><span class="number">1e4</span> === <span class="number">10000</span>;</span><br><span class="line"><span class="number">1e5</span> === <span class="number">100000</span>;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>对象属性简写</li>
+</ol>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; x:x, y:y &#125;;</span><br><span class="line"><span class="comment">//简写</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123; x, y &#125;;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>箭头函数简写</li>
+</ol>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sayHello = name =&gt; <span class="built_in">console</span>.log(<span class="string">'Hello'</span>, name);</span><br><span class="line"> </span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Loaded'</span>), <span class="number">2000</span>);</span><br><span class="line"> </span><br><span class="line">list.forEach(item =&gt; <span class="built_in">console</span>.log(item));</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>隐式返回简写<br>我们经常使用 return 关键字来返回一个函数的最终结果。使用单条语句的箭头函数将隐式返回求值结果（该函数必须省略大括号（{}）才能省略 return 关键字）。<br>要返回多行表达式（如对象字面量），那么需要用 () 而不是 {} 来包裹你的函数体。这样可以确保代码作为一个单独的表达式被求值返回。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calcCircumference</span>(<span class="params">diameter</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.PI * diameter</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简写</span></span><br><span class="line">calcCircumference = diameter =&gt; (</span><br><span class="line">  <span class="built_in">Math</span>.PI * diameter;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数默认值</p>
+</li>
+</ol>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function volume(<span class="keyword">l</span>, w, <span class="keyword">h</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (w === undefined)</span><br><span class="line">    w = 3;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">h</span> === undefined)</span><br><span class="line">    <span class="keyword">h</span> = 4;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">l</span> * w * <span class="keyword">h</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 简写</span></span><br><span class="line">volume = (<span class="keyword">l</span>, w = 3, <span class="keyword">h</span> = 4 ) =&gt; (<span class="keyword">l</span> * w * <span class="keyword">h</span>);</span><br><span class="line"> </span><br><span class="line">volume(2) <span class="comment">//output: 24</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>模板字面量</li>
+</ol>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ES6<span class="escape">``</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>解构赋值简写</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> observable = <span class="built_in">require</span>(<span class="string">'mobx/observable'</span>);</span><br><span class="line"><span class="keyword">const</span> action = <span class="built_in">require</span>(<span class="string">'mobx/action'</span>);</span><br><span class="line"><span class="keyword">const</span> runInAction = <span class="built_in">require</span>(<span class="string">'mobx/runInAction'</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">this</span>.props.store;</span><br><span class="line"><span class="keyword">const</span> form = <span class="keyword">this</span>.props.form;</span><br><span class="line"><span class="keyword">const</span> loading = <span class="keyword">this</span>.props.loading;</span><br><span class="line"><span class="keyword">const</span> errors = <span class="keyword">this</span>.props.errors;</span><br><span class="line"><span class="keyword">const</span> entity = <span class="keyword">this</span>.props.entity;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; observable, action, runInAction &#125; <span class="keyword">from</span> <span class="string">'mobx'</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> &#123; store, form, loading, errors, entity &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"><span class="keyword">const</span> &#123; store, form, loading, errors, entity:contact &#125; = <span class="keyword">this</span>.props;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>多行字符串简写</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">同<span class="number">12</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>展开运算符简写</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拼接数组</span></span><br><span class="line"><span class="keyword">const</span> odd = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> nums = [<span class="number">2</span> ,<span class="number">4</span> , <span class="number">6</span>].concat(odd);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 克隆数组</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr.slice()</span><br><span class="line"><span class="comment">// 简写</span></span><br><span class="line"><span class="comment">// 拼接数组</span></span><br><span class="line"><span class="keyword">const</span> odd = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span> ];</span><br><span class="line"><span class="keyword">const</span> nums = [<span class="number">2</span> ,<span class="number">4</span> , <span class="number">6</span>, ...odd];</span><br><span class="line">console.<span class="built_in">log</span>(nums); <span class="comment">// [ 2, 4, 6, 1, 3, 5 ]</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// 克隆数组</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr];</span><br></pre></td></tr></table></figure>
+<ol>
+<li>强制参数简写</li>
+</ol>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function foo(bar) &#123;</span><br><span class="line">  <span class="keyword">if</span>(bar === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">'Missing parameter!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> bar;</span><br><span class="line">&#125;</span><br><span class="line"><span class="regexp">//</span> 简写</span><br><span class="line"><span class="function"><span class="title">mandatory</span> = <span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">'Missing parameter!'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"> </span><br><span class="line"><span class="title">foo</span> = <span class="params">(bar = mandatory())</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> bar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Array.find 简写</li>
+</ol>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const pets = [</span><br><span class="line">  &#123; <span class="built_in">type</span>: <span class="string">'Dog'</span>, name: <span class="string">'Max'</span>&#125;,</span><br><span class="line">  &#123; <span class="built_in">type</span>: <span class="string">'Cat'</span>, name: <span class="string">'Karl'</span>&#125;,</span><br><span class="line">  &#123; <span class="built_in">type</span>: <span class="string">'Dog'</span>, name: <span class="string">'Tommy'</span>&#125;,</span><br><span class="line">]</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findDog</span><span class="params">(name)</span></span> &#123;</span><br><span class="line">  <span class="keyword">for</span>(let i = <span class="number">0</span>; i&lt;pets .length; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span>(pets[i].<span class="built_in">type</span> === <span class="string">'Dog'</span> &amp;&amp; pets[i].name === name) &#123;</span><br><span class="line">      <span class="keyword">return</span> pets[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pet = pets.find(pet =&gt; pet.<span class="built_in">type</span> ===<span class="string">'Dog'</span> &amp;&amp; pet.name === <span class="string">'Tommy'</span>);</span><br><span class="line">console.log(pet); // &#123; <span class="built_in">type</span>: <span class="string">'Dog'</span>, name: <span class="string">'Tommy'</span> &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Object[key] 简写</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validate</span>(<span class="params">values</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(!values.first)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">if</span>(!values.last)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log(validate(&#123;first:<span class="string">'Bruce'</span>,last:<span class="string">'Wayne'</span>&#125;)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象验证规则</span></span><br><span class="line"><span class="keyword">const</span> schema = &#123;</span><br><span class="line">  first: &#123;</span><br><span class="line">    required:<span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  last: &#123;</span><br><span class="line">    required:<span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 通用的验证函数</span></span><br><span class="line"><span class="keyword">const</span> validate = (schema, values) =&gt; &#123;</span><br><span class="line">  <span class="keyword">for</span>(field <span class="keyword">in</span> schema) &#123;</span><br><span class="line">    <span class="keyword">if</span>(schema[field].required) &#123;</span><br><span class="line">      <span class="keyword">if</span>(!values[field]) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log(validate(schema, &#123;first:<span class="string">'Bruce'</span>&#125;)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(validate(schema, &#123;first:<span class="string">'Bruce'</span>,last:<span class="string">'Wayne'</span>&#125;)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>双位非运算符简写</li>
+</ol>
+<p>双位运算符有一个非常实用的使用场景：可以用来代替 Math.floor</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Math.<span class="built_in">floor</span>(<span class="number">4.9</span>) === <span class="number">4</span>  <span class="comment">//true</span></span><br><span class="line"><span class="comment">// 简写</span></span><br><span class="line">~~<span class="number">4.9</span> === <span class="number">4</span>  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/angular/">angular</a>
+            
+            <a href="/tags/bootstrap/">bootstrap</a>
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/09/30/js简写技巧/';
+        this.page.identifier = '2018/09/30/js简写技巧/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

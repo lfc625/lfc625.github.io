@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>一百个js技巧 - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2018-03-14">2018-03-14</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">一百个js技巧</h2>
+            <!-- <div class="post-meta">本文总共6521个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <ol>
+<li>神乎其技的 + 号<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">//使用 <span class="code">`+`</span> 运算符可以快速将一个字符串数值转化为数字</span><br><span class="line">console.log(typeof '1');  //string</span><br><span class="line">console.log(typeof +'1');  //number</span><br><span class="line"></span><br><span class="line">//Date类型会转化为number类型的时间戳，精确到ms</span><br><span class="line">console.log(+new Date())  //1484219585488</span><br><span class="line"></span><br><span class="line">//相比这种方式转换时间戳简便，Date.parse()只精确到s，ms的位置都为0</span><br><span class="line">console.log(Date.parse(new Date()))  //'1484219585000'</span><br><span class="line"></span><br><span class="line">//无法转换为有效的数字一般会得到NaN</span><br><span class="line">console.log(+'abc') //NaN</span><br><span class="line">console.log(+function()&#123;&#125;)  //NaN</span><br><span class="line"></span><br><span class="line">//数组有点奇特</span><br><span class="line">console.log(+[1,2,3]);  //NaN</span><br><span class="line">console.log(+[]);  //0</span><br><span class="line">console.log(+[5]);  //5</span><br><span class="line"></span><br><span class="line">//这还就导致了</span><br><span class="line">console.log(++[<span class="link_label">[</span>]][+[]]+[+[]])  //10</span><br><span class="line"></span><br><span class="line">//为什么呢？一脸懵逼的你一定愿意看看推导</span><br><span class="line"></span><br><span class="line">+[] = 0</span><br><span class="line">  =&gt;  ++[<span class="link_label">[</span>]][<span class="link_label">+[</span>]]+[<span class="link_label">+[</span>]] = ++[<span class="link_label">[</span>]][0]+[0] </span><br><span class="line"></span><br><span class="line">[<span class="link_label">[</span>]][0] = []</span><br><span class="line">  =&gt;  ++[<span class="link_label">[</span>]][0] = ++[] = [] + 1 = '' + '1' =  '1'</span><br><span class="line"></span><br><span class="line">//++运算符得到的结果一定是number，所以有必要用 + 号再一次转换类型</span><br><span class="line"></span><br><span class="line">++[] = +( [] + 1 ) = +'1' = 1</span><br><span class="line">  =&gt;  1 + [0] = '1' + '0' = '10'</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>2.妙用数组length属性</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var <span class="operator">a</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">console.<span class="built_in">log</span>(<span class="operator">a</span>.<span class="built_in">length</span>)</span><br><span class="line"><span class="comment"></span><br><span class="line">//清空数组</span></span><br><span class="line"><span class="operator">a</span>.<span class="built_in">length</span> = <span class="number">0</span>;  <span class="comment"> //a = []</span></span><br><span class="line"><span class="comment"></span><br><span class="line">//截取数组</span></span><br><span class="line"><span class="operator">a</span>.<span class="built_in">length</span> = <span class="number">2</span>;  <span class="comment"> //a = [1, 2]</span></span><br><span class="line"><span class="comment"></span><br><span class="line">//扩张数组，用undefined填充</span></span><br><span class="line"><span class="operator">a</span>.<span class="built_in">length</span> = <span class="number">5</span>;  <span class="comment"> //a = [1, 2, 3, 4, undefined]</span></span><br></pre></td></tr></table></figure>
+<p>3.两个数花式交换</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//方案一</span><br><span class="line">var <span class="literal">a</span> = <span class="number">1</span>, b =<span class="number">2</span><span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> = [b, b = <span class="literal">a</span>][<span class="number">0</span>]<span class="comment">;</span></span><br><span class="line">console.log(<span class="literal">a</span>, b)<span class="comment">;  //2 1</span></span><br><span class="line"></span><br><span class="line">//方案二</span><br><span class="line">var <span class="literal">a</span> = <span class="number">1</span>, b =<span class="number">2</span><span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> = <span class="literal">a</span> ^ b<span class="comment">;</span></span><br><span class="line">b = <span class="literal">a</span> ^ b<span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> = <span class="literal">a</span> ^ b<span class="comment">;</span></span><br><span class="line">console.log(<span class="literal">a</span>,b)  //<span class="number">2</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>在读取length的循环中缓存length</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">for</span>(var i = <span class="number">0</span>; i &lt; a.length; i++)&#123;</span><br><span class="line">    console.<span class="built_in">log</span>(a[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>尽管上面的做法没有异议，但每次循环都会额外做一个计算数组length的操作，数组足够小的时候这当然没有任何问题，但当它足够大，它就会成为拖垮性能的一个元凶。假如你尝试过在java中处理一个超大文件的每一个字节时使用上面的做法，你可能会懂得它对性能的破坏力有多大。<br>必要的时候采用下面这种做法吧：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">for</span>(var i = <span class="number">0</span>, len = a.length; i &lt; len; i++)&#123;</span><br><span class="line">    console.<span class="built_in">log</span>(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>可动态指定地访问Object属性</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">    name : <span class="string">'cmx'</span>,</span><br><span class="line">    age : <span class="number">24</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以这么访问一个key</span></span><br><span class="line"><span class="built_in">console</span>.log(o.name);</span><br><span class="line"></span><br><span class="line"><span class="comment">//还可以这么访问一个key</span></span><br><span class="line"><span class="built_in">console</span>.log(a[<span class="string">'name'</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//再直白一点</span></span><br><span class="line"><span class="keyword">var</span> key = <span class="string">'name'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a[key]);</span><br></pre></td></tr></table></figure>
+<p>看完你能知道应用场景吗？</p>
+<ol>
+<li>妙用And和Or</li>
+</ol>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//设置变量的初始默认值</span><br><span class="line">function(<span class="literal">a</span>)&#123;</span><br><span class="line">    <span class="literal">a</span> = <span class="literal">a</span> || '默认值'<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//代替<span class="keyword">if</span>语句，利用短路特性，如果<span class="literal">a</span>变量是有效值（非undefined、null、<span class="string">""</span>、<span class="literal">false</span>、<span class="number">0</span>等），执行方法dosomething</span><br><span class="line"><span class="literal">a</span> &amp;&amp; dosomething(<span class="literal">a</span>)<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">//同理，<span class="literal">a</span>为无效值时执行dosomething函数</span><br><span class="line"><span class="literal">a</span> || dosomething()<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>数组拼接</li>
+</ol>
+<p>存在两种方式去拼接两个数组：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line">var b = [<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//生成一个新的数组，不破坏原数组</span></span><br><span class="line">a = a.concat(b)    <span class="comment">//a=[1,2,3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//以第一个参数数组作为this，第二个参数数组作为遍历参数，push进第一个数组，最终第一个数组为两个数组的拼接，第二个数组不改变</span></span><br><span class="line">Array.prototype.push.apply(a, b)    <span class="comment">//a=[1,2,3] b=[3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相当于</span></span><br><span class="line">a.push(b[<span class="number">0</span>], b[<span class="number">1</span>], b[<span class="number">2</span>]..)</span><br></pre></td></tr></table></figure>
+<p>什么时候用哪种呢？concat由于生成新的数组，必然是占内存的，但它不限制合并数组大小。而第二种方法存在合并数组个数限制（实际上是函数的形参个数限制，不超过65536），内存则相对于concat减少了一个合并后数组的大小。性能上相差不多。</p>
+<ol>
+<li>两个操作符typeof跟instanceof</li>
+</ol>
+<p>typeof判断变量的类型，为一元运算符<br>instanceof判断变量的实例（原型链），为二元运算符<br>用法上，</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="function"><span class="title">log</span><span class="params">(typeof &#123;name:<span class="string">'chenmuxin'</span>&#125;)</span></span> <span class="comment">//'object'</span></span><br><span class="line">console.<span class="function"><span class="title">log</span><span class="params">(&#123;name:<span class="string">'chenmuxin'</span>&#125; instanceof Object)</span></span>  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>typeof返回的是一个全小写字符串，依据变量的类型可能会返回：</p>
+<p>‘object’、’number’、’string’、’undefined’、’function’、’boolean’、’symbol’</p>
+<p>如你所见，不存在数组类型。数组返回的是’object’，不仅数组，所有诸如Date、RegExp都被作为object看待</p>
+<p>‘number’类型：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">typeof</span>(<span class="number">1</span>)   <span class="comment">//也可以这样使用，类似java</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">3.1415</span>   <span class="comment">//js的number类型统一了整型浮点型等</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span>  <span class="comment">//Not a number表示的是无穷和非数值，它是一个number类型</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Number</span>(<span class="number">1</span>)    <span class="comment">//Number类直接返回的类型也是number</span></span><br></pre></td></tr></table></figure></p>
+<p>‘undefined’类型：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">typeof</span> i_am_undeclared  <span class="comment">//一个未声明变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> i_am_declared_but_undefined_value;  <span class="comment">//一个已声明但未赋值变量</span></span><br><span class="line"><span class="keyword">typeof</span> i_am_declared_but_undefined_value</span><br></pre></td></tr></table></figure>
+<p>最容易迷惑情形：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> Number(<span class="number">1</span>)    <span class="regexp">//</span>返回<span class="string">'object'</span>，使用<span class="keyword">new</span>操作符时，诸如String、Boolean等引用类返回的是object</span><br><span class="line"><span class="keyword">typeof</span> Number(<span class="number">1</span>)    <span class="regexp">//</span><span class="string">'number'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="regexp">//</span>返回<span class="string">'object'</span>，js诞生之时起，<span class="literal">null</span>就是跟object同类型，这显然不合适。但es6的提案<span class="keyword">typeof</span> <span class="literal">null</span> == <span class="string">'null'</span>被否决，所以目前都还只能这么认识它</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="regexp">/a/</span>  <span class="regexp">//</span>正则在不同浏览器上可能有不同类型，可能是function，也可能是object，标准是object。判断正则应使用<span class="keyword">instanceof</span></span><br></pre></td></tr></table></figure>
+<p>使用instanceof时，首先要保证对象可以new，只有允许new才会存在所谓实例。所以想使用instanceof判断一个基本变量的类型是不可行的。</p>
+<p>console.log(1 instanceof Number) //false<br>数组无法使用typeof来判断，但可以使用instanceof（一定场景下会失败，例如多重iframe）</p>
+<p>console.log([1] instanceof Array)  //true<br>当然也可以使用更稳妥的数组的方法：</p>
+<p>console.log(Array.isArray([1])) //true<br>总结：像数组、正则等继承自Object但具体的对象（首先可以new），我们一般都可以用instanceof去判断。像很多基本变量以及它们的引用类型，我们就用typeof去判断。</p>
+<ol>
+<li>in和for遍历</li>
+</ol>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>];</span><br><span class="line"><span class="keyword">var</span> b = <span class="comment">&#123;name : 'cmx'&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//基本数组遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,length = a.length; i &lt; length; i++)<span class="comment">&#123;</span><br><span class="line">    console.log(a[i]);</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//of运算符每次循环直接得到数组值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">of</span> a)<span class="comment">&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//in运算符每次循环得到当前下标</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)<span class="comment">&#123;</span><br><span class="line">    console.log(a[i]);</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//in运算符遍历对象时，每次得到对象的key</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> b)<span class="comment">&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">    console.log(b[i]);</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>存在一些特殊情况，in遍历时，不仅会把数组（或对象）的每一个下标（key）遍历出来，一旦像下面这样定义了原型属性或方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.what = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>in遍历还会把它们一起遍历出来，这里得到一个what。如果没有作必要的判断往往会导致如下：<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)<span class="comment">&#123;</span><br><span class="line">    //打印a[what]出错</span><br><span class="line">    console.log(a[i]);</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>要么不使用原型直接添加的方式，而使用Object.defineProperty并设置可枚举属性为false。要么就in遍历数组时，都判断当前i是否为number类型：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="built_in">Array</span>.prototype.cmx = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)&#123;</span><br><span class="line">    <span class="comment">//+i是因为i遍历出来的都是字符串形式。至于为什么不使用 i != NaN ，因为任意两个NaN不相等啊</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">Number</span>.isNaN(+i))&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为原型扩展是不允许添加一个number类型的，所以上面的做法成立。<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Array</span>.prototype.<span class="number">1</span> = <span class="number">1</span> <span class="comment">//error</span></span><br><span class="line">或者使用通用的方法（同时适合数组和对象）</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)<span class="comment">&#123;</span><br><span class="line">    if(a.hasOwnProperty(i))&#123;</span><br><span class="line">        console.log(a[i])</span><br><span class="line">    &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">Object</span>.prototype.hasOwnProperty()会忽略对象原型链上的属性和方法。</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>call和apply</li>
+</ol>
+<p>我们先来看段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Chen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'老陈'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params">hello</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'我是老陈的方法'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(hello + <span class="string">'， I am '</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Huang</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'老黄'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params">hello</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'我是老黄的方法'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(hello + <span class="string">'， I am '</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> chen = <span class="keyword">new</span> Chen();</span><br><span class="line">chen.sayHello(<span class="string">'你好'</span>);    <span class="comment">//我是老陈的方法  你好， I am 老陈</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> huang = <span class="keyword">new</span> Huang();</span><br><span class="line"></span><br><span class="line">chen.sayHello.call(huang,<span class="string">'Hello'</span>);  <span class="comment">//我是老陈的方法  Hello， I am 老黄</span></span><br><span class="line"></span><br><span class="line">chen.sayHello.apply(huang,[<span class="string">'Hi'</span>])  <span class="comment">//我是老陈的方法  Hi， I am 老黄</span></span><br></pre></td></tr></table></figure>
+<p>call和apply非常像，都是为一个函数指定上下文，并传入参数。唯一的区别在于参数参入的形式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">Function</span><span class="class">.prototype</span><span class="class">.call</span>(<span class="tag">thisObj</span>, ..<span class="class">.args</span>)</span><br><span class="line"><span class="tag">Function</span><span class="class">.prototype</span><span class="class">.apply</span>(<span class="tag">thisObj</span><span class="attr_selector">[, argArray]</span>)</span><br></pre></td></tr></table></figure>
+<p>call()以thisObj作为上下文带上若干个指定的参数值调用某个函数或方法，参数必须展开。</p>
+<p>apply()以thisObj作为上下文带上一个数组或累数组参数调用某个函数或方法，参数必须组合成一个数组。</p>
+<p>由于只是形式不同，故以其中一个作为示例说明：</p>
+<p>chen.sayHello.call(huang, ‘Hello’)<br>以huang作为上下文，调用chen的sayHello方法，由于chen.sayHello()调用的this.name已经被更改为huang.name，所以得到上面的执行结果。</p>
+<p>用call或者apply来模拟一下继承：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Boy</span><span class="params">(name, love)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.lova = love;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.say = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        console.log(<span class="string">'I am '</span>+ name +<span class="string">'，I like '</span>+ love +<span class="string">'，what about you?'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BadBoy</span><span class="params">(name, love)</span></span>&#123;</span><br><span class="line">    Boy.call(<span class="keyword">this</span>, name, love);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.<span class="keyword">do</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">        console.log(<span class="string">'I made a mistake!'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> badBoy = <span class="keyword">new</span> BadBoy(<span class="string">'张三'</span>,<span class="string">'打架'</span>);</span><br><span class="line">badBoy.say();   <span class="comment">//I am 张三，I like 打架，what about you?</span></span><br><span class="line">badBoy.<span class="keyword">do</span>();    <span class="comment">//I made a mistake!</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> boy = <span class="keyword">new</span> Boy(<span class="string">'李四'</span>,<span class="string">'学习'</span>);</span><br><span class="line">boy.say();  <span class="comment">//I am 李四，I like 学习，what about you?</span></span><br><span class="line">boy.<span class="keyword">do</span>();   <span class="comment">//boy.do is not a function</span></span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/03/14/javascriptの百ぁ技/';
+        this.page.identifier = '2018/03/14/javascriptの百ぁ技/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

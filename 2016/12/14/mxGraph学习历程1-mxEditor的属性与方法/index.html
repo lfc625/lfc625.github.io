@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>mxgraph - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2016-12-14">2016-12-14</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">mxgraph</h2>
+            <!-- <div class="post-meta">本文总共1587个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <p>API介绍<br>核心类：mxEditor<br>onInit<br>mxgraph = seen<br>mxEvent.OPEN<br>mxEvent.SAVE</p>
+<p>mximage 创建一张图片<br>mxConnectionConstraint 连接限制 不知道啥用<br>mxpoint 貌似创建了一个二维坐标点</p>
+<ul>
+<li>coedc 放大缩小处理</li>
+<li>dynamicloading  点击会动态加载数据</li>
+<li>dynamicstyle 如何给图中元素加颜色</li>
+<li>dynamic toolbar 左侧的拖拽操作栏</li>
+<li>editing 双击添加名字 存在两个不同的文字区域</li>
+<li>events 右键的功能和连接</li>
+<li>IO 不知道有蛋用啊</li>
+<li>graphlayout hierarchicallayout似乎可以变换布局的形状</li>
+<li>images 加载图片</li>
+<li>indicators 调整文字的位置</li>
+<li>labelposition 文字位置</li>
+<li>labels 也是与文字位置有关的一个东西吧</li>
+<li>layers 不同图层</li>
+<li>merge 不知道是什么东西</li>
+<li>monitor 监控状态有黄色的感叹号</li>
+<li>offpage 到下一页的一种按钮功能切换视图来用的</li>
+<li>orgchart 一些工具功能</li>
+<li>悬浮的工具框。。树状结构()</li>
+<li>overlays 单击选中双击会弹窗的一个事件吧</li>
+<li>permissions 一些权限 类似编辑模式查看模式等等</li>
+<li>ports 以上的所有东西的一个集合应用</li>
+<li>schema 不知所以的表格</li>
+<li>scrollbars 也是表格相关的东西</li>
+<li>secondlabel 可以写小标的东西</li>
+<li>shape 立方体</li>
+<li>stylesheet 不知道</li>
+<li>swimlanes 很复杂的一个东西似乎是可以折叠的一个功能 可以来做这个拉升的背景图</li>
+<li>thread 也是在告警感叹号</li>
+<li>toolbar 可以复制当期的选中的图形到左边的操作栏</li>
+<li>tree 树状的一个图</li>
+<li>uiconfig 选中以后单击就可以加图像了</li>
+<li>userobject 可以看到xml信息</li>
+<li>validation 判断除了目标以外都不能连</li>
+<li>windows 貌似是窗口内的一些操作的东西</li>
+<li>wrapping 不知道啥用 似乎是字在图里面</li>
+<li>helloport 不知道</li>
+<li>pagebreaks 切一部分出来 </li>
+<li>fixedpoints 不知道</li>
+<li>contexticons 图形下会出现小的工具条</li>
+<li>guides 也许是辅助对齐线</li>
+<li>fixedicon 也许是出现小的icon在图形中</li>
+<li>markers 不知道</li>
+<li>dragsource 某种拖拽效果</li>
+<li>orthogonal 似乎是可以衍生四条线出去会有一种不同的方向感</li>
+<li>standardsmode 还是去展示一些xml的信息吧</li>
+<li>edgetolerance 不知道是什么 真的 </li>
+<li>stencils 数学太渣了 什么是容差</li>
+<li>hovericons 还是会出现小的工具只是地方不一样</li>
+<li>portrefs 一张图上可以有多个节点来做连线处理</li>
+<li>control 还是会有删除的小按钮</li>
+<li>wires 估计是画电路图的QAQ</li>
+<li>menustyle 会有一个提示小按钮</li>
+<li>perimeter 周长是干蛋的东西啊</li>
+<li>grid 缩放功能</li>
+<li>groups 两个图形合成一个</li>
+<li>visibility 元素可见性的一些操作 可以做删除</li>
+<li>autolayout 自动布局的一个东西</li>
+<li>touch 非常好的一个旋转</li>
+<li>collapse 可以做一个外层容器</li>
+<li>folding 应该就是折叠的一个东西</li>
+<li>lod 放大会莫名加些东西进来</li>
+<li>hoverstyle hover样式</li>
+<li>anchors 还是会有很多点来连接</li>
+<li>showregion 可以使用右键选中元素</li>
+<li>boundary 一个有关边界的东西不知道有啥用</li>
+<li>morph 交换顺序</li>
+<li>htmllabel 可以加表单似乎</li>
+<li>drop 从外面拖拽东西进来</li>
+<li>handles 有一个文本操作区域</li>
+<li>如何去构建一个操作类 然后写入操作方法 并对其进行调用，去操作一些方法的API属性。</li>
+</ul>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/angular/">angular</a>
+            
+            <a href="/tags/bootstrap/">bootstrap</a>
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2016/12/14/mxGraph学习历程1-mxEditor的属性与方法/';
+        this.page.identifier = '2016/12/14/mxGraph学习历程1-mxEditor的属性与方法/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

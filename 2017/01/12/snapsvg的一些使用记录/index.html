@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="liaofeic">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css" type="text/css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>snapsvg - Alex&#39;s Blog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="hexo,个人博客,前端技术,javascript,html,css,angular,ionic,jquery">
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="world">world</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <!-- <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a> -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/tool" title="工具">
+            <i class="fa fa-question-circle"></i>
+            <span>工具</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-tags"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">code魔法</h1>
+        <h3 class="cover-siteTitle">stayHungry</h3>
+        <p class="cover-siteDesc">求知若饥,虚心若愚</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/lfc625" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/life" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <!-- <div class="post-author clearfix">
+                <a class="avatar fleft" href="undefined" target="_blank">
+                    <img width="48" src="undefined" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="undefined" target="_blank">undefined</a>
+                    <span title="最后编辑于2017-01-12">2017-01-12</span>
+                </p>
+                <p>undefined</p>
+            </div> -->
+            <h2 class="post-title">snapSvg</h2>
+            <!-- <div class="post-meta">本文总共2523个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴</div> -->
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="Snapsvg__u7EC4_u4EF6_u4F7F_u7528_uFF1A"><a href="#Snapsvg__u7EC4_u4EF6_u4F7F_u7528_uFF1A" class="headerlink" title="Snapsvg 组件使用："></a>Snapsvg 组件使用：</h3><hr>
+<p>查找元素：</p>
+<p>Elm.select(“#id”)  通过 id 查找元素</p>
+<hr>
+<p>查找所有元素</p>
+<p>f.selectAll(“#id tag”) 查找 id 为 id 下的所有 tag 标签元素</p>
+<hr>
+<p>元素属性</p>
+<p>Elm.attr(“attribute”)  获取元素属性</p>
+<p>element.attr({ opacity: value, rotate: (value * 360) });</p>
+<hr>
+<p>绑定点击事件</p>
+<p>Elem.click(function(){}) </p>
+<hr>
+<p>添加拖动事件</p>
+<p>Elem.drag(onmove, onstart, onend, [mcontext],[scontext],[econtext])</p>
+<p>正在拖动方法、拖动开始方法、拖动结束方法、正在拖动 context 、开始拖动 context 、结束拖动 context</p>
+<hr>
+<p>变换元素</p>
+<p>Elem.transform( str) 变换的字符串</p>
+<p>eg:  transform: ‘s2r45,250,250’ ( 同时缩放水平和垂直的所标需要指定中心点 )</p>
+<p>t 平移坐标 x,y</p>
+<p>s 放大倍数</p>
+<p>r 旋转角度增加到多少度</p>
+<p>? 中心点坐标</p>
+<p>eg: transform: ‘t100,-100s2,3’</p>
+<p>s 水平和垂直缩放</p>
+<p>t 移动</p>
+<hr>
+<p>元素编组</p>
+<p>var r = s.rect(100,100,100,100,20,20).attr({ stroke: ‘#123456’, ‘strokeWidth’: 20, fill: ‘red’ });</p>
+<p>var c = s.circle(50,50,50).attr({ stroke: ‘#123456’, ‘strokeWidth’: 20, fill: ‘blue’ });</p>
+<p>var g = s.group(r,c);</p>
+<hr>
+<p>组追加元素</p>
+<p>var r0 = s.rect(150,150,100,100,20,20).attr({ fill: “orange”, opacity: “0.8”, stroke: “black”, strokeWidth: “2” });</p>
+<p>var c0 = s.circle(225,225,10).attr({ fill: “silver”, stroke: “black” });</p>
+<p>var g0 = s.group( r0,c0 );</p>
+<p>var r1 = s.rect(100,100,100,100,20,20).attr({ fill: “red”, opacity: “0.8”, stroke: “black”, strokeWidth: “2” });</p>
+<p>var c1 = s.circle(175,175,10).attr({ fill: “silver”, stroke: “black” });</p>
+<p>var g1 = s.group( r1,c1 );</p>
+<p>g1.appendTo( g0 );</p>
+<hr>
+<p>动画效果</p>
+<p>Elem.animate(attr ， duration ， easing ， callback) 属性，持续时间，释放，回调</p>
+<pre><code>持续时间，弹性释放
+</code></pre><p>g.animate({ transform: ‘s1r0,150,150’ }, 1000,     mina.bounce )</p>
+<pre><code>起始  结束    改变值的方法                                持续时间
+</code></pre><p>Snap.animate(0,    100,   function (value) {t.attr({text: Math.round(value)}); }, 1000);</p>
+<hr>
+<p>创建<em>**</em>path</p>
+<p>Elem.path(pathstring) 元素使用 pathstring 创建 path</p>
+<hr>
+<p>检查点是否在path路径中（闭合？）</p>
+<p>Snap.path.isPointInside( myPathString, x,y )</p>
+<hr>
+<p>创建椭圆</p>
+<p>elem.ellipse(x ， y ， rx ， ry) 中心点 x ，中心点 y ，横向半径，纵向半径</p>
+<hr>
+<p>svg path<em>**</em>用法</p>
+<p>M = moveto(M X,Y) ：将画笔移动到指定的坐标位置</p>
+<p>L = lineto(L X,Y) ：画直线到指定的坐标位置</p>
+<p>H = horizontal lineto(H X) ：画水平线到指定的 X 坐标位置</p>
+<p>V = vertical lineto(V Y) ：画垂直线到指定的 Y 坐标位置</p>
+<p>C = curveto(C X1,Y1,X2,Y2,ENDX,ENDY) ：三次贝赛曲线</p>
+<p>S = smooth curveto(S X2,Y2,ENDX,ENDY)</p>
+<p>Q = quadratic Belzier curve(Q X,Y,ENDX,ENDY) ：二次贝赛曲线</p>
+<p>T = smooth quadratic Belzier curveto(T ENDX,ENDY) ：映射</p>
+<p>A = elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y) ：弧线</p>
+<p>Z = closepath() ：关闭路径</p>
+<hr>
+<p>A<em>**</em>指令</p>
+<p>允许不闭合。可以想像成是椭圆的某一段，共七个参数：</p>
+<p>A RX,RY,XROTATION,FLAG1,FLAG2,X,Y</p>
+<p>RX,RY 指所在椭圆的半轴大小</p>
+<p>XROTATION 指椭圆的 X 轴与水平方向顺时针方向夹角，可以想像成一个水平的椭圆绕中心点顺时针旋转 XROTATION 的角度。</p>
+<p>FLAG1 只有两个值， 1 表示大角度弧线， 0 为小角度弧线。</p>
+<p>FLAG2 只有两个值，确定从起点至终点的方向， 1 为顺时针， 0 为逆时针</p>
+<p>X,Y 为终点坐标</p>
+<hr>
+<p>创建矩阵对象</p>
+<p>var myMatrix = new Snap.Matrix();</p>
+<p>myMatrix.scale(4,2);                 // 横纵缩放</p>
+<p>myMatrix.translate(100,0);          // 平移</p>
+<p>myMatrix.rotate(45);              // 旋转</p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/angular/">angular</a>
+            
+            <a href="/tags/bootstrap/">bootstrap</a>
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/01/12/snapsvg的一些使用记录/';
+        this.page.identifier = '2017/01/12/snapsvg的一些使用记录/';
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, disqus_shortname = '[object Object]', s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+
+</div>
+<script src="/js/busuanzi.pure.mini.js" type="text/javascript"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <!-- <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp -->
+            <!-- 自定义链接 -->
+            <!-- <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a> -->
+            <a href="https://github.com/SunInfoFE" title="suninfo">suninfo</a>
+            <a href="https://github.com/lfc625" title="lfc625">mygithub</a>
+        </p>
+        <!-- <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p> -->
+        <p>
+            ©2018 基于Hexo搭建 ，主题 JSimple ，作者LFC
+        </p>
+        
+
+    </div>
+</footer>
+<script src="/js/InsightSearch.js" type="text/javascript"></script>
+<script src="/js/SimpleCore.js" type="text/javascript"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>
